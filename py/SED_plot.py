@@ -14,13 +14,13 @@ import seaborn; seaborn.set_style('ticks')
 import matplotlib as mpl
 from matplotlib.ticker import FormatStrFormatter
 params = {
-   'axes.labelsize': 16,
-   'font.size': 16,
-   'legend.fontsize': 16,
-   'xtick.labelsize': 16,
-   'ytick.labelsize': 16,
+   'axes.labelsize': 24,
+   'font.size': 24,
+   'legend.fontsize': 24,
+   'xtick.labelsize': 24,
+   'ytick.labelsize': 24,
    'text.usetex': True,
-   'figure.figsize': [7.281, 4.5]
+   'figure.figsize': [16, 16/1.618]
    }
 mpl.rcParams.update(params)
 
@@ -36,7 +36,7 @@ def main():
     # Small script to plot SED, photometry and spectrum
 
     # Load data
-    spectrum = np.genfromtxt("../data/stitched_spectrum_bin50.dat")
+    spectrum = np.genfromtxt("../data/stitched_spectrum_bin1.dat")
     wl_spec = spectrum[:, 0]
     flux_spec = spectrum[:, 1]
     error_spec = spectrum[:, 2]
@@ -71,11 +71,11 @@ def main():
     print(AB - AB_err_hi)
     AB_err_lo = -2.5*np.log10(flux_spec - error_spec) - 5*np.log10(wl_spec) - 2.406
 
-    pl.errorbar(wl_spec, AB, yerr=[AB - AB_err_lo, AB_err_hi - AB], fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3, label="X-shooter spectrum", zorder=1)
-    pl.errorbar(wl_phot, mag, xerr=wl_plot_wid, yerr=magerr, fmt=".", capsize=0, ms=10, color = "#4C72B0", label = "Photometric points", zorder=3, mec="black", mew = 1)
+    # pl.errorbar(wl_spec, AB, yerr=[AB - AB_err_lo, AB_err_hi - AB], fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3, label="X-shooter spectrum", zorder=1)
+    pl.errorbar(wl_phot, mag, xerr=wl_plot_wid, yerr=magerr, fmt=".", capsize=0, ms=20, color = "#4C72B0", label = "Photometric points", zorder=3, mec="black", mew = 1)
     # pl.errorbar(wl_spec, AB, fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3)
-    # pl.plot(wl_spec, medfilt(AB, 1), linestyle="steps-mid", lw=0.5, alpha=0.7)
-    pl.plot(wl_SED, AB_SED, linestyle="steps-mid", lw=1.0, color = "#C44E52", label = "SED fit", zorder=2)
+    # pl.plot(wl_spec[::3], AB[::3], color="black", linestyle="steps-mid", lw=0.3, alpha=0.3, label="X-shooter spectrum", zorder=1)
+    pl.plot(wl_SED, AB_SED, linestyle="steps-mid", lw=2.0, color = "#C44E52", label = "SED fit", zorder=2)
     # pl.axhline(0, linestyle="dashed", color = "black", lw = 0.4)
     pl.legend(loc=2)
 
@@ -114,7 +114,7 @@ def main():
 
     pl.tight_layout()
     pl.savefig("../figures/SEDspecphot.pdf")
-    # pl.show()
+    pl.show()
 
 
 if __name__ == '__main__':

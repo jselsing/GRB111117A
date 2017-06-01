@@ -177,9 +177,9 @@ def main():
     VIS_wl, VIS_flux, VIS_error, VIS_bp = bin_spectrum(VIS_wl, VIS_flux, VIS_error, VIS_bp.astype("bool"), 3, weight=True)
 
     # Construct lists
-    UVB_mask = (UVB_wl > 3300) & (UVB_wl < 5600)
-    VIS_mask = (VIS_wl < 9800)
-    NIR_mask = (NIR_wl > 13000) & (NIR_wl < 20000) & (NIR_flux > -1e-19)
+    UVB_mask = (UVB_wl > 3300) & (UVB_wl < 5500)
+    VIS_mask = (VIS_wl > 5700) & (VIS_wl < 9600)
+    NIR_mask = (NIR_wl > 12000) & (NIR_wl < 21000) & (NIR_flux > -1e-19)
     waves = [UVB_wl[UVB_mask], VIS_wl[VIS_mask], NIR_wl[NIR_mask]]
     flux = [UVB_flux[UVB_mask], VIS_flux[VIS_mask], NIR_flux[NIR_mask]]
     error = [UVB_error[UVB_mask], VIS_error[VIS_mask], NIR_error[NIR_mask]]
@@ -190,7 +190,7 @@ def main():
 
     np.savetxt(data_dir + "stitched_spectrum.dat", zip(wl, flux, error, bpmap), fmt = ['%10.6e', '%10.6e', '%10.6e', '%10.6f'], header=" wl flux error bpmap")
 
-    hbin = 10
+    hbin = 1
     wl_bin, flux_bin, error_bin, bp_bin = bin_spectrum(wl, flux, error, bpmap.astype("bool"), hbin, weight=True)
 
 
