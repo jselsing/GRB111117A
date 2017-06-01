@@ -74,7 +74,7 @@ def main():
     # pl.errorbar(wl_spec, AB, yerr=[AB - AB_err_lo, AB_err_hi - AB], fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3, label="X-shooter spectrum", zorder=1)
     pl.errorbar(wl_phot, mag, xerr=wl_plot_wid, yerr=magerr, fmt=".", capsize=0, ms=20, color = "#4C72B0", label = "Photometric points", zorder=3, mec="black", mew = 1)
     # pl.errorbar(wl_spec, AB, fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3)
-    # pl.plot(wl_spec[::3], AB[::3], color="black", linestyle="steps-mid", lw=0.3, alpha=0.3, label="X-shooter spectrum", zorder=1)
+    pl.plot(wl_spec[::3], AB[::3], color="black", linestyle="steps-mid", lw=0.3, alpha=0.3, label="X-shooter spectrum", zorder=1)
     pl.plot(wl_SED, AB_SED, linestyle="steps-mid", lw=2.0, color = "#C44E52", label = "SED fit", zorder=2)
     # pl.axhline(0, linestyle="dashed", color = "black", lw = 0.4)
     pl.legend(loc=2)
