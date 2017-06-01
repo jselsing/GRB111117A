@@ -22,7 +22,7 @@ def main():
     print(L_B_star)
     print()
     # L_B for a galaxy, 1 mag fainter
-    dM = 1
+    dM = 0.5
     print("L_B_limit:")
     print(L_B_star*10**(-0.4*(dM)))
     print()
@@ -54,12 +54,13 @@ def main():
     L_B_star = 10 ** (-1*(-22 - MB_star)/2.5)
 
 
-    lnunobs = len(L_B[L_B > L_B_star*10**(-0.4)])
+    lnunobs = len(L_B[L_B > L_B_star*10**(-0.4*(dM))])
     # Fraction unobservable
     print("Fraction unobservable:")
+    print(lnredshifts - lnunobs, lnredshifts)
     print(1 - lnunobs/lnredshifts)
 
-    
+
     # print(np.percentile(L_B[~np.isnan(L_B)], [14, 50, 85]))
 
 if __name__ == '__main__':
