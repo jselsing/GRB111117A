@@ -152,9 +152,9 @@ and $\Omega_m = 0.307$ and report all magnitudes in the AB system.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=9cm]{figures/GRB111117A_spec_obs.pdf}
-	\caption{Imaging of the field of GRB~111117A with the X-shooter slit overlaid. Only one slit is shown, despite four epochs of spectroscopic observations because of the similarity in position angle. The image is the FORS2 $R$-band image and%, for which the photometry is shown in Fig. \ref{fig:SED}. 
-	the blue asterisk indicates the GRB position as derived from the \emph{Chandra} observations in \citet{Sakamoto2013}. The errorcircle of the \emph{Chandra}-position is too small to be visible in the image.}
+	\includegraphics[width=9cm]{figures/GRB111117A_spec_obs2.pdf}
+	\caption{Imaging of the field of GRB~111117A with the X-shooter slit overlaid. Only one slit is shown, despite four epochs of spectroscopic observations because of the similarity in position angle. The image is the FORS2 $R$-band image for which the photometry is shown in Fig.~\ref{fig:SED}. 
+	The blue asterisk indicates the GRB position as derived from the \emph{Chandra} observations in \citet{Sakamoto2013}. The insert shows the 2D-image of the \oiii$\lambda$5007 emission line. The location of a bright skyline is marked by the blue box. The location of the emission line is indicated with the red ellipse. Because the host is observed in nodding-mode, negative images of the emission line appear on both sides in the spatial direction.}
 	\label{fig:spec_setup}
 \end{figure}
 
@@ -164,12 +164,12 @@ spectrograph, VLT/X-shooter \citep{Vernet2011}, at four seperate epochs. The
 burst was followed up 38 hours after the Burst Alert Telescope (BAT) trigger
 under ESO programme 088.A-0051 (PI: Fynbo) and again later using a different ESO
 program 091.D-0904 (PI: Hjorth). X-shooter can cover the wavelength range from
-3000~\AA~to 24\,800~\AA~(21\,000~\AA~when the $K$-band blocking filter is used) across
-three spectroscopic arms, simultaneously illuminated through the use of
-dichroics. The bias-correction, flat-fielding, order tracing, wavelength
-calibration, rectification, and flux calibration is then carried out using the
-VLT/X-shooter pipeline version 2.8.4 \citep{Modigliani2010}. 
-%Because the spectra are curved across each detector, a rectification algorithm
+3000~\AA~to 24\,800~\AA~(21\,000~\AA~when the $K$-band blocking filter is used)
+across three spectroscopic arms. The bias-correction, flat-fielding, order
+tracing, wavelength calibration, rectification, and flux calibration is then
+carried out using the VLT/X-shooter pipeline version 2.8.4
+\citep{Modigliani2010}. %Because the spectra are curved across each detector, a
+% rectification algorithm
 %is employed which introduces correlations between neighboring pixels. We select
 %a pixel-scale of 0.2/0.2/0.6 \AA/pix for the UVB/VIS/NIR arm to minimize the
 %degree of correlation while conserving the maximal resolution.
@@ -178,24 +178,19 @@ et al. 2017 (in prep.) and available
 online\footnote{\url{https://github.com/jselsing/XSGRB_reduction_scripts}}. The
 signal-to-noise of the continuum in the near-infrared arm is too low to use the
 optimal extraction algorithm \citep{Horne1986} and therefore the extraction is
-carried out with a simple aperture.
-
-An overview of the spectroscopic observations is given in Table~\ref{tab:spec_overview}, and the position of the slit on the target is shown in Fig.~\ref{fig:spec_setup}.
-
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=9cm]{figures/SEDspecphot.pdf}
-% 	\caption{SED fit showning the best-fist SED to the derived photometry. The detection of \lya~ is predicted from the SED fit and confirmed by the spectroscopic observations. Overplotted in grey is a version of the observed spectrum binned by 30 \AA. The reason for the spectral gap at 10000 \AA is from the merging of the visual and near-infrared arm.}
-% 	\label{fig:SED}
-% \end{figure}
+carried out with a simple aperture. An overview of the spectroscopic
+observations is given in Table~\ref{tab:spec_overview}, and the position of the
+slit on the target is shown in Fig.~\ref{fig:spec_setup}.We show the extracted
+spectrum in Fig.~\ref{fig:SED}.
 
 We determine a redshift of $z = 2.211$ from the simultaneous detection of
 emission lines interpreted as \lya, \oii, \hb, \oiii$\lambda$5007, and \ha, with
-\hb~detected at low significance ($\sim 3 \sigma$). \ha~is only visible in the
-first epoch, due to the $K$-band blocking filter used for the remainder
-observations. The nebular lines exhibit a spatial extent of $\sim$ 1\farc5 and
-show significant velocity structure along the slit. A drop in the continuum to
-the blue of the \lya~line further supports the inferred redshift.
+\hb~detected at low significance ($\sim 3 \sigma$). We show \oiii$\lambda$5007
+in the insert in Fig.~\ref{fig:spec_setup}.  \ha~is only visible in the first
+epoch, due to the $K$-band blocking filter used for the remainder observations.
+The nebular lines exhibit a spatial extent of $\sim$ 1\farc5 and show
+significant velocity structure along the slit. A drop in the continuum to the
+blue of the \lya~line further supports the inferred redshift.
 
 %The total extent of the lines in velocity space is $\sim$ 450 km/s. The line
 % profiles shows an asymmetric "double-horned" profile, indicating that we are
@@ -218,7 +213,7 @@ We obtain a limit on the SFR by integrating the part of \ha~free of contaminatio
 correcting for the missing flux using the line shape. After converting the 
 \citet{Kennicutt1998} relation to a \citet{Chabrier2003} initial mass function using
 \citet{Madau2014}, we derive a limit of $SFR > 7 M_\odot$~yr$^{-1}$. 
-From the SED-fit (Sect. \ref{SED}), and the detection of \lya, the host is
+From the SED-fit (Sect.~\ref{SED}), and the detection of \lya, the host is
 constrained to contain very little or no dust, which is why we do not apply 
 a dust-correction to the measured \ha~flux here.
 
@@ -227,12 +222,12 @@ a dust-correction to the measured \ha~flux here.
 % been masked and interpolated over. From the integrated \ha-line, we estimate
 % SFR = $18 \pm 3$ M$_\odot$ yr$^{-1}$.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=9cm]{figures/OIII_img.pdf}
-	\caption{2D-image of the \oiii$\lambda$5007 emission line. The location of a bright skyline is marked by the blue box. The location of the emission line is indicated with the red ellipse. Because the host is observed in nodding-mode, negative images of the emission line appear on both sides in the spatial direction.}
-	\label{fig:line}
-\end{figure}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=9cm]{figures/OIII_img.pdf}
+%	\caption{2D-image of the \oiii$\lambda$5007 emission line. The location of a bright skyline is marked by the blue box. The location of the emission line is indicated with the red ellipse. Because the host is observed in nodding-mode, negative images of the emission line appear on both sides in the spatial direction.}
+%	\label{fig:line}
+%\end{figure}
 
 %A measure of the optical-to-X-ray flux ratio is parametrized in terms of the
 % "darkness"-parameter $\beta_{OX}$\citep{Jakobsson2004}. Using the optical
@@ -246,13 +241,14 @@ a dust-correction to the measured \ha~flux here.
 
 \subsection{Imaging observations and SED analysis} \label{SED}
 
-In addition to the spectroscopy presented above, we imaged the field of GRB~111117A 
-in multiple broad-band filters using the VLT equipped with FORS2 ($gRIz$ filters) and HAWK-I
-($JHK_{\mathrm{s}}$ filters), long after the burst has faded. These new data are
-complemented by a re-analysis of some of the imagery used in
-\citet{Margutti2012} and \citet{Sakamoto2013} that are available to us here (GTC
-$gri$-band, TNG $R$-band, and Gemini $z$-band). A log of the photometric
-observations and measured brightnesses is given in Table~\ref{tab:phot_overview}.
+In addition to the spectroscopy presented above, we imaged the field of
+GRB~111117A in multiple broad-band filters using the VLT equipped with FORS2
+($gRIz$ filters) and HAWK-I ($JHK_{\mathrm{s}}$ filters), long after the burst
+has faded. These new data are complemented by a re-analysis of some of the
+imagery used in \citet{Margutti2012} and \citet{Sakamoto2013} that are available
+to us here (GTC $gri$-band, TNG $R$-band, and Gemini $z$-band). A log of the
+photometric observations and measured brightnesses is given in
+Table~\ref{tab:phot_overview}.
 
 All data were reduced, analyzed and fitted in a similar manner as described in detail in
 \citet{Kruhler2011a} and, more recently, in \citet{Schulze2016}. Very briefly, we use our own
@@ -265,16 +261,15 @@ Lupton\footnote{\url{https://www.sdss3.org/dr8/algorithms/sdssUBVRITransform.php
 We convert all magnitudes into the AB system if necessary, and correct for the Galactic 
 foreground of $E_{B-V}=0.027~\mathrm{mag}$.
 
-The multi-color spectral energy distribution (SED) is fit by
-\citet{Bruzual2003} single stellar population models based on a
-\citet{Chabrier2003} initial mass function in \emph{LePhare} \citep{Ilbert2006},
-where the redshift is fixed to the spectroscopic value of $z=2.211$. The best
-model is obtained with an unreddened galaxy template, and returns physical
-parameters of absolute magnitude ($M_B=-22.0\pm0.1$\,mag), stellar mass
-($\log(M_{\star}/M_\odot) = 9.9\pm0.2$), stellar population age ($\tau =
-0.5_{-0.3}^{+0.5}$ Gyr) and star-formation rate
-($SFR_{\mathrm{SED}}=11_{-4}^{+9} M_\odot\,\mathrm{yr}^{-1}$). %We show the SED
-% fit in Fig. \ref{fig:SED}.
+The multi-color spectral energy distribution (SED) is fit by \citet{Bruzual2003}
+single stellar population models based on a \citet{Chabrier2003} initial mass
+function in \emph{LePhare} \citep{Ilbert2006}, where the redshift is fixed to
+the spectroscopic value of $z=2.211$. The best model is obtained with an
+unreddened galaxy template, and returns physical parameters of absolute
+magnitude ($M_B=-22.0\pm0.1$\,mag), stellar mass ($\log(M_{\star}/M_\odot) =
+9.9\pm0.2$), stellar population age ($\tau = 0.5_{-0.3}^{+0.5}$ Gyr) and
+star-formation rate ($SFR_{\mathrm{SED}}=11_{-4}^{+9}
+M_\odot\,\mathrm{yr}^{-1}$). We show the SED fit in Fig.~\ref{fig:SED}.
 
 Noteworthy is the discrepancy of our new VLT/FORS2 photometry and the
 re-analysis of Gemini data to the $z$-band measurements of \citet{Margutti2012} and
@@ -305,7 +300,7 @@ determination. The obtained spectrum is well described by an absorbed power-law
 model. The best-fit spectral parameters are a photon index of $2.1 \pm 0.4$ and
 an intrinsic hydrogen column density $N_{\mathrm{H}}$ of $2.4_{-1.6}^{+2.4}
 \times 10^{22}$~cm$^{-2}$ ($z=2.211$), assuming a Galactic $N_{\mathrm{H}}$ in
-the burst direction of $4.1 \times 10^{20}$~cm$^{-2}$ \cite{Willingale2013}.
+the burst direction of $4.1 \times 10^{20}$~cm$^{-2}$ \citep{Willingale2013}.
 
 
 
@@ -323,34 +318,43 @@ As already pointed out \citep{Margutti2012, Sakamoto2013}, GRB~111117A securely
 belongs the short class of GRBs. Because the observed classification
 indicators, $T_{90}$ and hardness ratio, do not depend strongly on redshift
 \citep{Littlejohns2013a}, the updated redshift does not change this designation
-significantly. The intrinsic luminosity increases, as visible in the X-ray light curve
-in Fig. \ref{fig:sxray_lightcurve}, but it still is sub-luminous compared to
-the majority of long GRBs. \citet{Bromberg2013} investigated the degree to which the
+significantly. 
+%The intrinsic luminosity increases, as visible in the X-ray light curve
+%in Fig. \ref{fig:sxray_lightcurve}, but it still is sub-luminous compared to
+%the majority of long GRBs. 
+\citet{Bromberg2013} investigated the degree to which the
 long and short population distributions overlap and quantified the certainty in
 the class membership. GRB~111117A has $96_{-5}^{+3}$ percent probability of
-being short. Compared to the other two sGRB candidates at high redshift, GRB060121
+being short. Compared to the other two sGRB candidates at high redshift, GRB~060121
 \citep{DeUgartePostigo2006, Levan2006} at $1.7 \lesssim z \lesssim 4.5$
-($17_{-15}^{+14}$ per cent) and GRB090426 \citep{Antonelli2009, Levesque2010,
+($17_{-15}^{+14}$ per cent) and GRB~090426 \citep{Antonelli2009, Levesque2010,
 	Thone2011} at $z = 2.609$ ($10_{-10}^{+15}$ per cent), the certainty in class
 membership for GRB~111117A is much higher.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=9cm]{figures/XLC_111117A_rest.pdf}
-	\caption{Restframe XRT lightcurve of GRB~111117A, compared to the general population of XRT lightcurves of GRBs. The grey shared region is a compilation of long GRB lightcurves where the color represents density and the light blue is other short GRB lightcurves for which redshifts has been determined. Despite the remarkably high redshift, the luminosity is comparable to the bulk of the short burst population and still subluminous compared to the lGRB population.}
-	\label{fig:sxray_lightcurve}
-\end{figure}
+Additionally, \citet{Horvath2010} classifies both GRB~060121 and GRB~090426 as
+intermediate duration bursts. This comes from both events having very soft
+spectra, as compared to the hard ones typically seen in sGRBs. Intermediate
+bursts are very clearly related in their properties to long GRBs
+\citep{DeUgartePostigo2011}, so they are unlikely to come from compact object
+mergers.
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=9cm]{figures/XLC_111117A_rest.pdf}
+%	\caption{Restframe XRT lightcurve of GRB~111117A, compared to the general population of XRT lightcurves of GRBs. The grey shared region is a compilation of long GRB lightcurves where the color represents density and the light blue is other short GRB lightcurves for which redshifts has been determined. Despite the remarkably high redshift, the luminosity is comparable to the bulk of the short burst population and still subluminous compared to the lGRB population.}
+%	\label{fig:sxray_lightcurve}
+%\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Restframe $N_\mathrm{H}$} \label{restnH}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We plot the recalculated $N_\mathrm{H}$ in Fig. \ref{fig:NH_z} where we compare with the
+We plot the recalculated $N_\mathrm{H}$ in Fig.~\ref{fig:NH_z} where we compare with the
 distributions of complete samples of both long and short GRBs. The lGRB sample
 is from \citet{Arcodia2016} and the sGRB sample is from \citet{DAvanzo2014a}.
 17 of the 99 long bursts do not have redshifts and likewise 5 out of 16 for
 the short sample. Bursts without redshifts have been excluded for both groups.
-GRB~111117A occupies a unique position in Fig. \ref{fig:NH_z} with the highest
+GRB~111117A occupies a unique position in Fig.~\ref{fig:NH_z} with the highest
 $N_H$ of all short burst. The short sample, excluding GRB~111117A, is located at
 low redshifts ($z < 1$) and is found to populate a similar column density
 environment to long GRBs at similar redshifts \citep{DAvanzo2014a}. The inferred
@@ -360,10 +364,9 @@ as a function of redshift as found for the long GRB afterglows \citep{Arcodia201
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm]{figures/NH_z.pdf}
-	\caption{Rest frame, X-ray derived hydrogen column densities for GRB~111117A compared to complete samples of both long and short populations. In red we show the sample of lGRBs from \citet{Arcodia2016}. The detections are replaced with contours for clarity and the limits are shown with arrows. In blue is the sample of sGRBs from \citet{DAvanzo2014a}. GRB~111117A is an outlier from the short sample, but seems to follow the distribution of long GRBs.}
+	\caption{Rest frame, X-ray derived hydrogen column densities for GRB~111117A compared to complete samples of both long and short populations. The detections are replaced with contours for clarity and the limits are shown with arrows.}
 	\label{fig:NH_z}
 \end{figure}
-
 
 % \begin{figure}
 % 	\centering
@@ -389,8 +392,7 @@ the SFRs found in the hosts of long GRBs at a corresponding redshift
 \citep{Kruhler2015}. The high SFR is partly a selection effect, because a less
 star-forming galaxy would exhibit weaker emission lines, thus making the
 redshift harder to determine. Additionally, it is natural to expect some
-evolution in the hosts of sGRBs with redshift as illustrated in Sect.
-\ref{restnH}.
+evolution in the hosts of sGRBs with redshift as illustrated in Sect.~\ref{restnH}.
 
 
 %The detection of \lya~is consistent with the SED-inferred absence of dust, despite
@@ -528,19 +530,30 @@ All data, code and calculation related to the paper along with the
 paper itself are available at \url{https://github.com/jselsing/GRB111117A}.
 
 \begin{acknowledgements}
-TK acknowledges support through the Sofja Kovalevskaja Award to P. Schady. CT acknowledges support from a Spanish National Research Grant of Excellence under project AYA 2014-58381-P and funding associated to a Ramón y Cajál fellowship under grant number RyC-2012-09984.
+TK acknowledges support through the Sofja Kovalevskaja Award to P. Schady. 
+CT acknowledges support from a Spanish National Research Grant of Excellence under project AYA 2014-58381-P and funding associated to a Ramón y Cajál fellowship under grant number RyC-2012-09984.
+AdUP acknowledges support from a Ramón y Cajal fellowship, a BBVA Foundation Grant for Researchers and Cultural Creators,and the Spanish Ministry of Economy and Competitiveness through project AYA2014-58381-P.
+Partly based on observations made with the Gran Telescopio Canarias (GTC).
+
+
 \end{acknowledgements}
 
 \bibliographystyle{mnras}
 \bibliography{GRB111117A}
 
 \newpage
+%\appendix
 
 \input{tables/spec_overview.tex}
 
 \input{tables/phot_overview.tex}
 
-
+ \begin{figure*}
+ 	\centering
+ 	\includegraphics[width=16cm]{figures/SEDspecphot.pdf}
+ 	\caption{SED fit showning the best-fist SED to the derived photometry. The detection of \lya~ is predicted from the SED fit and confirmed by the spectroscopic observations. Overplotted in grey is the observed spectrum. The reason for the spectral gaps at 5500 \AA~and 10000 \AA~is from the merging of the arms.}
+ 	\label{fig:SED}
+ \end{figure*}
 
 
 
