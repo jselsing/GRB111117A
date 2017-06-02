@@ -66,11 +66,10 @@ detected to date. Our spectroscopic redshift supersedes a lower redshift value
 for this burst previously estimated from photometry.
 
 We use the spectroscopic redshift, as well as new imaging data to constrain the
-nature of the host galaxy as well as physical parameters of the GRB. The rest
-frame X-ray derived hydrogen column density, for example, is high compared to a
+nature of the host galaxy as well as physical parameters of the GRB. The rest-frame X-ray derived hydrogen column density, for example, is high compared to a
 complete sample of sGRBs and seems to follow the evolution with redshift as
 traced by the hosts of long GRBs (lGRBs). This is consistent with the proportion
-of the sGRB population originating in late-type galaxies live in similar
+of the sGRB population originating in late-type galaxies, live in similar
 environments to that of lGRB hosts.
 
 The host lies in the brighter end of the expected host brightness distribution
@@ -81,10 +80,11 @@ GRB~111117A is evidence against a lognormal delay-time model for sGRBs through
 the predicted redshift distribution of sGRBs, which is very sensitive to
 high-$z$ sGRBs.
 
-From the age of the universe at explosion time, an initial progenitor separation
-of $a_0 < 3.2~R_\odot$ is required in the case of a binary neutron star system. 
-This puts constraints on the progenitor system evolution up to the time
-of explosion.
+From the age of the universe at the time of GRB explosion, an initial neutron
+star (NS) separation of $a_0 < 3.2~R_\odot$ is required in the case where the
+progenitor is a pair of inspiralling NSs. This constraint excludes some of the
+longest formation channels for this burst. 
+
 }
 
 \keywords{Gamma-ray burst: individual: GRB~111117A --- }
@@ -95,19 +95,19 @@ of explosion.
 \section{Introduction}
 
 
-There is now mounting evidence that most short-duration gamma-ray bursts (GRBs)
-come from the merger of neutron stars (NSs), either with another NS, or a black
+There is now mounting evidence that most short-duration $\gamma$-ray bursts
+come from the merger of NSs, either with another NS, or a black
 hole, due to their apparent association with kilonovae \citep{Barnes2013a,
 	Tanvir2013b, Yang2015, Jin2016, Rosswog2016}. The absence of associated
 supernovae in deep searches \citep[e.g.][]{Hjorth2005a,Fox2005,Hjorth2005b}
 supports this idea and distinguishes the physical origin of sGRBs from their
 long-duration counterparts. %\citep[albeit see also][]{Fynbo2006b, Valle2006, Gal-Yam2006}.
 
-The host galaxies of short GRBs are diverse. They are more massive and less actively 
-star-forming on average than long GRB hosts \citep{Fong2013b}, while in some cases, no host 
+The host galaxies of sGRBs are diverse. They are more massive and less actively 
+star-forming on average than lGRB hosts \citep{Fong2013b}, while in some cases, no host 
 galaxy can be identified \citep{Berger2010a, Tunnicliffe2014}. Together with their position 
 within their hosts \citep{Fong2013a}, this suggests a progenitor system that can be very
-long-lived, and is associated with stellar mass rather than star-formation rate
+long-lived, and is associated with stellar mass rather than star-formation rate (SFR)
 \citep{Berger2014}. The median redshift for sGRBs is $z\sim0.5$ \citep{Berger2014}, and
 because most of these measurements come from the associated hosts, it is arguably biased
 towards lower redshifts.
@@ -119,15 +119,15 @@ towards lower redshifts.
 % allows insights into the phenomenon itself.
 
 The total lifetimes of NS binaries depends on their initial separations and
-subsequent inspiral times, and impacts the timing and distribution of the
-enrichment of the ISM and subsequent stars and planets with heavy $r$-process
+subsequent inspiral times. The delay time from formation to explosion impacts
+the timing and distribution of the enrichment of the ISM with heavy $r$-process
 elements \citep{VandeVoort2015, Wallner2015,  Ji2016}. Some limits can be
 calculated based on models of star-formation histories of, and the spatial
 distribution of sGRBs in, their host galaxies \citep[][]{Berger2014}. The most
 distant cosmological bursts, however, offer direct, hard limits.
 
 
-In this \emph{Letter} we present the spectrum of the host galaxy of the short GRB~111117A ($T_{90}=0.46$~s) and measure its redshift to be $z=2.211$. This value is significantly higher 
+In this \emph{Letter} we present a spectrum of the host galaxy of the short GRB~111117A ($T_{90}=0.46$~s) and measure its redshift to be $z=2.211$. This value is significantly higher 
 than the previously estimated redshift based on photometric studies. 
 We present the GRB's rest frame 
 properties based on this new distance compared to previous analyses
@@ -137,10 +137,9 @@ the new solution to the SED fit. %While no optical afterglow was detected, the
 %of the X-ray afterglow by the \emph{Chandra X-ray Observatory} also allows
 %us to discuss the positioning and environmental properties of this remarkably
 %distant short GRB.
-
-Throughout this \emph{Letter} we use the $\Lambda$CDM cosmology provided by
+Throughout this \emph{Letter} we use the $\Lambda$CDM cosmology parameters provided by
 \citet{Planck2015} in which the universe is flat with $H_0 = 67.7$\,km\,s$^{-1}$
-and $\Omega_m = 0.307$ and report all magnitudes in the AB system.
+and $\Omega_m = 0.307$. All magnitudes are given in the AB system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -161,33 +160,34 @@ and $\Omega_m = 0.307$ and report all magnitudes in the AB system.
 
 Spectroscopic observations were carried out using the cross-dispersed echelle
 spectrograph, VLT/X-shooter \citep{Vernet2011}, at four seperate epochs. The
-burst was followed up 38 hours after the Burst Alert Telescope (BAT) trigger
-under ESO programme 088.A-0051 (PI: Fynbo) and again later using a different ESO
-program 091.D-0904 (PI: Hjorth). X-shooter can cover the wavelength range from
-3000~\AA~to 24\,800~\AA~(21\,000~\AA~when the $K$-band blocking filter is used)
-across three spectroscopic arms. The bias-correction, flat-fielding, order
-tracing, wavelength calibration, rectification, and flux calibration is then
-carried out using the VLT/X-shooter pipeline version 2.8.4
-\citep{Modigliani2010}. %Because the spectra are curved across each detector, a
+burst was observed 38 hours after the Burst Alert Telescope (BAT) trigger under
+ESO programme 088.A-0051 (PI: Fynbo) and again later under ESO programme
+091.D-0904 (PI: Hjorth). X-shooter covers the wavelength range from 3000~\AA~to
+24\,800~\AA~(21\,000~\AA~when the $K$-band blocking filter is used) across three
+spectroscopic arms. We carried out the bias-correction, flat-fielding, order
+tracing, wavelength calibration, rectification, and flux calibration using the
+VLT/X-shooter pipeline version 2.8.4 \citep{Modigliani2010}.
+%Because the spectra are curved across each detector, a
 % rectification algorithm
 %is employed which introduces correlations between neighboring pixels. We select
 %a pixel-scale of 0.2/0.2/0.6 \AA/pix for the UVB/VIS/NIR arm to minimize the
 %degree of correlation while conserving the maximal resolution.
 The observations are combined and extracted using scripts described in Selsing
 et al. 2017 (in prep.) and available
-online\footnote{\url{https://github.com/jselsing/XSGRB_reduction_scripts}}. The
-signal-to-noise of the continuum in the near-infrared arm is too low to use the
-optimal extraction algorithm \citep{Horne1986} and therefore the extraction is
-carried out with a simple aperture. An overview of the spectroscopic
-observations is given in Table~\ref{tab:spec_overview}, and the position of the
-slit on the target is shown in Fig.~\ref{fig:spec_setup}.We show the extracted
-spectrum in Fig.~\ref{fig:SED}.
+online\footnote{\url{https://github.com/jselsing/XSGRB_reduction_scripts}}. 
+%The
+%signal-to-noise of the continuum in the near-infrared arm is too low to use the
+%optimal extraction algorithm \citep{Horne1986} and therefore the extraction is
+%carried out with a simple aperture.
+An overview of the spectroscopic observations is given in
+Table~\ref{tab:spec_overview}, and the slit position is shown in
+Fig.~\ref{fig:spec_setup}. We show the extracted spectrum in Fig.~\ref{fig:SED}.
 
 We determine a redshift of $z = 2.211$ from the simultaneous detection of
-emission lines interpreted as \lya, \oii, \hb, \oiii$\lambda$5007, and \ha, with
-\hb~detected at low significance ($\sim 3 \sigma$). We show \oiii$\lambda$5007
+emission lines interpreted as \lya, \oii, \hb, \oiii$\lambda$5007, and \ha. 
+\hb~is detected at low significance ($\sim 3 \sigma$). We show \oiii$\lambda$5007
 in the insert in Fig.~\ref{fig:spec_setup}.  \ha~is only visible in the first
-epoch, due to the $K$-band blocking filter used for the remainder observations.
+epoch due to the $K$-band blocking filter used for the remainder observations.
 The nebular lines exhibit a spatial extent of $\sim$ 1\farc5 and show
 significant velocity structure along the slit. A drop in the continuum to the
 blue of the \lya~line further supports the inferred redshift.
@@ -208,7 +208,7 @@ blue of the \lya~line further supports the inferred redshift.
 Using the luminosity of \ha, we can infer the star-formation rate (SFR) of a 
 galaxy \citep{Kennicutt1998}. At the redshift of the GRB host, \ha~is observed at 
 21\,000~\AA~where the night sky is very bright. In addition, several bright sky-lines 
-intersect the line, making an accurate estimate of the \ha-flux difficult. 
+are superposed on the line, making an accurate estimate of the \ha-flux difficult. 
 We obtain a limit on the SFR by integrating the part of \ha~free of contamination and 
 correcting for the missing flux using the line shape. After converting the 
 \citet{Kennicutt1998} relation to a \citet{Chabrier2003} initial mass function using
@@ -235,36 +235,32 @@ a dust-correction to the measured \ha~flux here.
 % interpolated and evaluated at the time of the non-detection. We find
 % $\beta_{OX} < 0.79$, consistent with what was reported in \citet{Sakamoto2013}.
 
-%Because the projected distance does not change much between redshift 1.3 and
-% 2.1, all conclusions of \citet{Margutti2012} and \citet{Sakamoto2013} relating
-% to host offset are unaffected.
-
 \subsection{Imaging observations and SED analysis} \label{SED}
 
 In addition to the spectroscopy presented above, we imaged the field of
 GRB~111117A in multiple broad-band filters using the VLT equipped with FORS2
 ($gRIz$ filters) and HAWK-I ($JHK_{\mathrm{s}}$ filters), long after the burst
-has faded. These new data are complemented by a re-analysis of some of the
-imagery used in \citet{Margutti2012} and \citet{Sakamoto2013} that are available
-to us here (GTC $gri$-band, TNG $R$-band, and Gemini $z$-band). A log of the
-photometric observations and measured brightnesses is given in
+faded. These new data are complemented by a re-analysis of some of the imaging
+used in \citet{Margutti2012} and \citet{Sakamoto2013} that are available to us
+(GTC $gri$-band, TNG $R$-band, and Gemini $z$-band). A log of the photometric
+observations and measured brightnesses is given in
 Table~\ref{tab:phot_overview}.
 
 All data were reduced, analyzed and fitted in a similar manner as described in detail in
-\citet{Kruhler2011a} and, more recently, in \citet{Schulze2016}. Very briefly, we use our own
-\texttt{python} and IRAF routines to perform a standard reduction which includes
+\citet{Kruhler2011a} and, more recently, in \citet{Schulze2016}. Briefly, we use our own
+\texttt{Python} and IRAF routines to perform a standard reduction which includes
 bias/flat-field correction, de-fringing (if necessary), sky-subtraction, and
 stacking of individual images. The photometry of the host was tied against magnitudes 
 of field stars from the SDSS and 2MASS catalogs in the case of $grizJHK_{\mathrm{s}}$ filters. 
-For the $R$ and $I$-band photometry we used the color transformations of
-Lupton\footnote{\url{https://www.sdss3.org/dr8/algorithms/sdssUBVRITransform.php}}. 
-We convert all magnitudes into the AB system if necessary, and correct for the Galactic 
+%For the $R$ and $I$-band photometry, we used the color transformations of
+%Lupton\footnote{\url{https://www.sdss3.org/dr8/algorithms/sdssUBVRITransform.php}}. 
+We convert all magnitudes into the AB system, and correct for a Galactic 
 foreground of $E_{B-V}=0.027~\mathrm{mag}$.
 
 The multi-color spectral energy distribution (SED) is fit by \citet{Bruzual2003}
 single stellar population models based on a \citet{Chabrier2003} initial mass
 function in \emph{LePhare} \citep{Ilbert2006}, where the redshift is fixed to
-the spectroscopic value of $z=2.211$. The best model is obtained with an
+the spectroscopic value of $z=2.211$. The best fit model is an
 unreddened galaxy template, and returns physical parameters of absolute
 magnitude ($M_B=-22.0\pm0.1$\,mag), stellar mass ($\log(M_{\star}/M_\odot) =
 9.9\pm0.2$), stellar population age ($\tau = 0.5_{-0.3}^{+0.5}$ Gyr) and
@@ -272,9 +268,9 @@ star-formation rate ($SFR_{\mathrm{SED}}=11_{-4}^{+9}
 M_\odot\,\mathrm{yr}^{-1}$). We show the SED fit in Fig.~\ref{fig:SED}.
 
 Noteworthy is the discrepancy of our new VLT/FORS2 photometry and the
-re-analysis of Gemini data to the $z$-band measurements of \citet{Margutti2012} and
+re-analysis of the Gemini data to the $z$-band measurements of \citet{Margutti2012} and
 \citet{Sakamoto2013}. Both of these authors report $z$-band photometry that is brighter 
-by 0.8~mag to 1.0 mag than our value, whereas data taken in bluer filters are in excellent agreement. In fact, the large $i-z$ color is mistakenly interpreted as a 4000\,\AA\,break
+by 0.8~mag to 1.0 mag compared to our value, where data taken in bluer filters are in excellent agreement. The large $i-z$ color is mistakenly interpreted as a 4000\,\AA\,break
 driving the galaxy photometric redshift of the earlier works. Using
 the revised photometry from Table~\ref{tab:phot_overview}, the photometric redshift of the
 galaxy is $z_{\mathrm{phot}}=2.04_{-0.21}^{+0.19}$, consistent with the
@@ -290,32 +286,34 @@ spectroscopic value at the 1~$\sigma$ confidence level.
 
 We retrieved the automated data products provided by the \textit{Swift}-XRT GRB
 repository\footnote{\url{http://www.swift.ac.uk/xrt\_products/00507901}}
-\citep{Evans2009}. The X-ray afterglow light curve can be fit with a single power-law decay with
-index $\alpha=1.27_{-0.10}^{+0.12}$. We performed a time-integrated spectral
-analysis using data in photon counting (PC) mode in the widest time epoch where
-the $0.3-1.5\,\mathrm{keV}$ to $1.5-10\,\mathrm{keV}$ hardness ratio is constant
-(namely, from $t-T_0 = 205$~s to $t-T_0 = 203.5$~ks, for a total of 29.1~ks of
-data) to prevent spectral changes that can affect the X-ray column density
-determination. The obtained spectrum is well described by an absorbed power-law
-model. The best-fit spectral parameters are a photon index of $2.1 \pm 0.4$ and
+\citep{Evans2009}. 
+%The X-ray afterglow light curve can be fit with a single power-law decay with an
+%index $\alpha=1.27_{-0.10}^{+0.12}$. We performed a time-integrated spectral
+%analysis using data obtained in photon counting (PC) mode in the widest time epoch where
+%the $0.3-1.5\,\mathrm{keV}$ to $1.5-10\,\mathrm{keV}$ hardness ratio is constant
+%(namely, from $t-T_0 = 205$~s to $t-T_0 = 203.5$~ks, for a total of 29.1~ks of
+%data) to prevent spectral changes that can affect the X-ray column density
+%determination. 
+The obtained spectrum is well described by an absorbed power-law
+model and the best-fit spectral parameters are a photon index of $2.1 \pm 0.4$ and
 an intrinsic hydrogen column density $N_{\mathrm{H}}$ of $2.4_{-1.6}^{+2.4}
 \times 10^{22}$~cm$^{-2}$ ($z=2.211$), assuming a Galactic $N_{\mathrm{H}}$ in
 the burst direction of $4.1 \times 10^{20}$~cm$^{-2}$ \citep{Willingale2013}.
 
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Reinterpretation of restframe properties}
+\section{Reinterpretation of the restframe properties}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Because the projected distance does not change much between $z = 1.3$ and $z =
+2.211$, all conclusions of \citet{Margutti2012} and \citet{Sakamoto2013}
+relating to host offset are unaffected.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Classification}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As already pointed out \citep{Margutti2012, Sakamoto2013}, GRB~111117A securely 
-belongs the short class of GRBs. Because the observed classification
+As already pointed out \citep{Margutti2012, Sakamoto2013}, GRB~111117A is securely 
+classified as belonging to the short class of GRBs. Because the observed classification
 indicators, $T_{90}$ and hardness ratio, do not depend strongly on redshift
 \citep{Littlejohns2013a}, the updated redshift does not change this designation
 significantly. 
@@ -325,18 +323,18 @@ significantly.
 \citet{Bromberg2013} investigated the degree to which the
 long and short population distributions overlap and quantified the certainty in
 the class membership. GRB~111117A has $96_{-5}^{+3}$ percent probability of
-being short. Compared to the other two sGRB candidates at high redshift, GRB~060121
+being a sGRB. Compared to the other two sGRB candidates at high redshift, GRB~060121
 \citep{DeUgartePostigo2006, Levan2006} at $1.7 \lesssim z \lesssim 4.5$
 ($17_{-15}^{+14}$ per cent) and GRB~090426 \citep{Antonelli2009, Levesque2010,
 	Thone2011} at $z = 2.609$ ($10_{-10}^{+15}$ per cent), the certainty in class
 membership for GRB~111117A is much higher.
 
-Additionally, \citet{Horvath2010} classifies both GRB~060121 and GRB~090426 as
-intermediate duration bursts. This comes from both events having very soft
-spectra, as compared to the hard ones typically seen in sGRBs. Intermediate
-bursts are very clearly related in their properties to long GRBs
-\citep{DeUgartePostigo2011}, so they are unlikely to come from compact object
-mergers.
+%Additionally, \citet{Horvath2010} classifies both GRB~060121 and GRB~090426 as
+%intermediate duration bursts. This comes from both events having very soft
+%spectra, as compared to the hard ones typically seen in sGRBs. Intermediate
+%bursts are very clearly related in their properties to lGRBs
+%\citep{DeUgartePostigo2011}, so they are unlikely to come from compact object
+%mergers.
 
 %\begin{figure}
 %	\centering
@@ -349,17 +347,19 @@ mergers.
 \subsection{Restframe $N_\mathrm{H}$} \label{restnH}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We plot the recalculated $N_\mathrm{H}$ in Fig.~\ref{fig:NH_z} where we compare with the
-distributions of complete samples of both long and short GRBs. The lGRB sample
-is from \citet{Arcodia2016} and the sGRB sample is from \citet{DAvanzo2014a}.
-17 of the 99 long bursts do not have redshifts and likewise 5 out of 16 for
-the short sample. Bursts without redshifts have been excluded for both groups.
-GRB~111117A occupies a unique position in Fig.~\ref{fig:NH_z} with the highest
-$N_H$ of all short burst. The short sample, excluding GRB~111117A, is located at
-low redshifts ($z < 1$) and is found to populate a similar column density
-environment to long GRBs at similar redshifts \citep{DAvanzo2014a}. The inferred
+We show the recalculated $N_\mathrm{H}$ in Fig.~\ref{fig:NH_z} where we compare
+with the distributions of complete samples of both long and short GRBs. The lGRB
+sample is from \citet{Arcodia2016} and the sGRB sample is from
+\citet{DAvanzo2014a}. 17 out of the 99 long bursts do not have redshifts, and
+likewise for 5 out of 16 in the short sample. Bursts without redshifts have been
+excluded for both groups. GRB~111117A occupies a unique position in
+Fig.~\ref{fig:NH_z} with the highest $N_H$ of all short bursts. Additionally the
+upper limit at $z = 2.609$ belongs to GRB~090426 and does not belong in the
+short sample. The short sample, excluding GRB~111117A, is located at low
+redshifts ($z < 1$) and is found to populate a similar column density
+environment to lGRBs at similar redshifts \citep{DAvanzo2014a}. The inferred
 hydrogen column for GRB~111117A seems to follow the trend with increasing $N_H$
-as a function of redshift as found for the long GRB afterglows \citep{Arcodia2016}.
+as a function of redshift as found for the lGRB afterglows \citep{Arcodia2016}.
 
 \begin{figure}
 	\centering
@@ -380,17 +380,17 @@ as a function of redshift as found for the long GRB afterglows \citep{Arcodia201
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %From the clear host association, GRB~111117A does not belong to the hostless class of GRBs \citep{Berger2010a} and because the host exhibits emission lines indicative of a population of relatively young stars, 
-As the majority of short GRBs \citep{Fong2013b}, the host of GRB~111117A is a
+As the majority of sGRBs \citep{Fong2013b}, the host of GRB~111117A is a
 late-type galaxy and is entirely consistent in terms of stellar mass and stellar
-age with the general population of short GRB hosts ($\left\langle M _*
+age with the general population of sGRB hosts ($\left\langle M _*
 \right\rangle = 10^{10.1} M_{\odot}$ and $\left\langle \tau _* \right\rangle =
 0.3 $~Gyr) \citep{Leibler2010}. Being a late-type host, both the stellar mass
 and sSFR are entirely within the range expected for the hosts of sGRBs
 \citep{Behroozi2014}. The SFR is $\sim$1 order of magnitude higher than the
-typical SFR for short GRB hosts galaxies \citep{Berger2014} and more similar to
-the SFRs found in the hosts of long GRBs at a corresponding redshift
+typical SFR for sGRB host galaxies \citep{Berger2014} and more similar to
+the SFR found in the hosts of lGRBs at a corresponding redshift
 \citep{Kruhler2015}. The high SFR is partly a selection effect, because a less
-star-forming galaxy would exhibit weaker emission lines, thus making the
+star forming galaxy would exhibit weaker emission lines, thus making the
 redshift harder to determine. Additionally, it is natural to expect some
 evolution in the hosts of sGRBs with redshift as illustrated in Sect.~\ref{restnH}.
 
@@ -409,22 +409,21 @@ evolution in the hosts of sGRBs with redshift as illustrated in Sect.~\ref{restn
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Implications for redshift distribution of short GRBs}
+\section{Implications for the redshift distribution of sGRBs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 A single sGRB at high redshift does little in terms of constraining the redshift
-distribution and therethrough the progenitor channels. In particular, other
-short-GRB hosts could be missed because they are intrinsically fainter and thus
-this high-$z$ event is only detected due to the brightness of the host.
-\citet{Berger2014} compiled a sample of sGRB host luminosities, normalized by
-the characteristic galaxy luminosity at their respective redshift,
-$L_B/L^{\star}_{B}$. 26 out of 39 hosts (66 per cent) in the sample have
-redshifts. To convert the SED-inferred $M_B$ of GRB~111117A to
-$L_B/L^{\star}_{B}$, we use the characteristic absolute B-band magnitude of the
-Schechter function for the blue galaxies ($U - V < 0.25$) in the redshift window
-$2.0 \leq z \leq 2.5$ from \citet{Marchesini2007} and find $L_B/L^{\star}_{B} =
-1.2$, which is brighter than 70 per cent of the hosts in \citet{Berger2014} with
-measured $L_B/L^{\star}_{B}$. 
+distribution of sGRBs. In particular, other sGRB hosts could be missed because
+they are intrinsically fainter and thus this high-$z$ event is only detected due
+to the brightness of it's host. \citet{Berger2014} compiled a sample of sGRB
+host luminosities, normalized by the characteristic galaxy luminosity at their
+respective redshift, $L_B/L^{\star}_{B}$. Out of the 39 hosts in the sample, 26
+(66 per cent) have redshifts. To convert the SED-inferred $M_B$ of GRB~111117A
+to $L_B/L^{\star}_{B}$, we use the characteristic absolute $B$-band magnitude of
+the Schechter function for blue galaxies ($U - V < 0.25$) in the redshift window
+$2.0 \leq z \leq 2.5$ from \citet{Marchesini2007}. For GRB~111117A, we obtain
+$L_B/L^{\star}_{B} = 1.2$, which is brighter than 70 per cent of the hosts in
+\citet{Berger2014} with measured $L_B/L^{\star}_{B}$.
 
 If we assume that we are able to obtain emission-line redshifts from hosts with
 $R < 25$~mag \citep{Kruhler2012}, then we would have missed around 30 per cent
@@ -446,18 +445,17 @@ be at high redshift, the missed fraction will increase. If we assume that
 high-$z$ and missed due to host faintness, 22 out of 39 hosts (55 per cent)
 would be missed at $z = 2.211$. This serves as an upper limit on the fraction of
 missed burst at high-$z$ and illustrates that we are likely \textit{not} missing a
-large fraction of sGRBs redshift at $z \approx 2$, due to host faintness.
+large fraction of sGRBs redshift at $z \approx 2$ due to host faintness.
 
 The theoretical redshift distribution of sGRBs depends on the type of delay-time
-function used to model the progenitor system. The redshift of GRB~111117A puts
-constraints on the type of delay-time models suitable for modeling. The
-likelihood preferred lognormal time delay models investigated in
-\citet{Wanderman2015} predicts a rate of sGRBs at $z = 2.211$, $\sim$ two orders
-of magnitude lower compared to peak rate ($z = 0.9$). It is stated in
-\citet{Wanderman2015} that this preference depends critically on the absence of
-non-collapsar sGRB at $z \gtrsim 1.2$. The redshift of the burst, on the other
-hand, is close to the expected peak in sGRB rate calculated for the power law
-models \citep{Behroozi2014, Wanderman2015}. 
+function used to model the progenitor system. The likelihood preferred lognormal
+time delay models investigated by \citet{Wanderman2015} predict a sGRB rate at
+$z = 2.211$, $\sim$ two orders of magnitude lower compared to the peak rate at
+$z = 0.9$. According to \citet{Wanderman2015}, this preference depends
+critically on the absence of non-collapsar sGRBs at $z \gtrsim 1.2$. The
+redshift of GRB~111117A, on the other hand, is close to the expected peak in
+sGRB rate calculated using the power law delay time models \citep{Behroozi2014,
+	Wanderman2015}.
 
 
 
@@ -465,27 +463,26 @@ models \citep{Behroozi2014, Wanderman2015}.
 %\todo{Reformulate paragraph}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Constraints on the progenitor separation}
+\section{Constraints on progenitor separation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 At $z = 2.211$, the age of the universe is 3 Gyr. If the progenitor systems of
-sGRBs are the merger of two neutron stars, this sets a hard upper limit to the
-coalescence timescale for such a system. In the absence of other mechanisms, the
-timescale of the orbital decay of the system is set by the energy loss due to
-gravitational waves, which in turn is set by the mass of constituent compact
+sGRBs are the merger of two NSs, this sets a hard upper limit to the coalescence
+timescale for such a system. In the absence of other mechanisms, the timescale
+of the orbital decay of the system is set by the energy loss due to
+gravitational waves, which in turn is set by the mass of the constituent compact
 objects and the separation of the two \citep{Postnov2014}. If we assume that the
 formation timescale of the first galaxies is short compared to the time since
-the big bang \citep{Richard2011} and if we assume a mass of 1.4~$M_\odot$ for
-each of the neutron stars at the time of system formation, this places a hard
-upper limit on the initial separation, $a_0$, of the two neutron stars of $a_0 <
-3.2~R_\odot$.
+the Big Bang \citep{Richard2011}, and if we assume a mass of 1.4~$M_\odot$ for
+each of the NSs at the time of system formation, this places a hard upper limit
+on the initial separation, of $a_0 < 3.2~R_\odot$.
 
 If we use the stellar population age from our SED fit, then we obtain a
 (softer) limit on the initial separation of $a_0 < 2.1~R_\odot$. However, this
 does not account for the possibility there could be an underlying stellar
 population of older stars from a previous star-formation epoch. The delay time
 between formation and explosion is well accommodated by the models of
-\citet{Belczynski2006}, although the longest formation channels are excluded.
+\citet{Belczynski2006}, although the longest delay times are excluded.
 This is especially true given the late type nature of the host
 \citep{OShaughnessy2008}.
 
@@ -497,17 +494,13 @@ In this \emph{Letter}, we have provided a revised, spectroscopic redshift for
 the short GRB~111117A based on emission lines setting it at $z = 2.211$. This
 value supersedes the previous photometric redshift of \citet{Margutti2012} and
 \citet{Sakamoto2013}. %The erroneous redshift estimate of previous authors is
-attributed to a discrepancy in the measured $z$-band magnitude.
+%attributed to a discrepancy in the measured $z$-band magnitude.
 
-The rest-frame parameters of the burst and the conditions of the burst
-environment have been recalculated using the new distance. The X-ray derived
-hydrogen column density towards GRB~111117A is the highest within a complete
-sample of short hosts and is indicative of an evolution with redshift as found
-for the hosts of long GRBs.
-
-The SFR of the host is in the upper end of the sGRB host SFR distribution and
-this helped us to measure the redshift for this galaxy. Despite the moderate age
-and high $N_\mathrm{H}$, almost no dust is present.
+Using the new distance, the X-ray derived $n_H$ towards GRB~111117A is the
+highest within a complete sample of sGRB hosts and is consistent with the
+$n_H-z$ evolution traced by the hosts of lGRBs.The SFR of the host is in the
+upper end of the sGRB host SFR distribution and despite the moderate age and
+high $N_\mathrm{H}$, almost no dust is present.
 
 Although a single burst carries little leverage in terms of constraining the
 redshift distribution of sGRB, the high redshift of GRB~111117A needs to be
@@ -515,7 +508,7 @@ accommodated in progenitor models. A lognormal delay time model predicts a very 
 density of bursts at $z = 2.211$, whereas a power law delay time model peaks
 near GRB~111117A. If more sGRBs are at similarly high redshifts, but are missed due to
 the faintness of their hosts, a lognormal delay time model will be disfavored.
-Compared to a sample of short GRB hosts, GRB~111117A is more luminous than 70 per
+Compared to a sample of sGRB hosts, GRB~111117A is more luminous than 70 per
 cent of the sample with measured luminosities. Conservatively, for 55 per
 cent of the sGRB hosts, we would be unable to determine a redshift should they be at 
 a similar redshift as GRB~111117A. This implies that we are \textit{not} missing a large
@@ -523,7 +516,7 @@ fraction of the sGRBs at $z \sim 2$.
 
 Using the age of the universe at the time of explosion allows us to set
 constraints on the maximal separation between the engine constituents at the
-time of formation. We find that the maximal separation for two neutron stars at
+time of formation. We find that the maximal separation of two NSs at
 formation time is $a_0 < 3.2~R_\odot$, which excludes some of the formation
 channels with the longest timescales.
 
@@ -535,7 +528,7 @@ TK acknowledges support through the Sofja Kovalevskaja Award to P. Schady.
 CT acknowledges support from a Spanish National Research Grant of Excellence under project AYA 2014-58381-P and funding associated to a Ramón y Cajál fellowship under grant number RyC-2012-09984.
 AdUP acknowledges support from a Ramón y Cajal fellowship, a BBVA Foundation Grant for Researchers and Cultural Creators,and the Spanish Ministry of Economy and Competitiveness through project AYA2014-58381-P.
 Partly based on observations made with the Gran Telescopio Canarias (GTC).
-
+ZC acknowledges support from the Spanish research project AYA 2014-58381-P and support from Juan de la Cierva Incorporaci\'on fellowships IJCI-2014-21669. 
 
 \end{acknowledgements}
 
