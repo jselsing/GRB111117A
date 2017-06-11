@@ -17,8 +17,8 @@ def calc_sep(age, m1, m2):
     # Convert to seconds
     t0 = (age*1e6 * u.yr).to(u.s)
     # Convert to kg
-    M_ns1 = (1.4 * u.Msun).to(u.kg)
-    M_ns2 = (1.4 * u.Msun).to(u.kg)
+    M_ns1 = (m1 * u.Msun).to(u.kg)
+    M_ns2 = (m2 * u.Msun).to(u.kg)
 
     # Total system mass
     M = M_ns1 + M_ns2

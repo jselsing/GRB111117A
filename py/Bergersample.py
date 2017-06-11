@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib.pyplot as pl
 import seaborn; seaborn.set_style('ticks')
 from scipy import interpolate
+import pandas as pd
 
 def main():
 
@@ -28,7 +29,19 @@ def main():
     print()
 
     # LB from Berger 2014
-    L_B = np.array([0.1, 1.0, 0.3, np.nan, np.nan, 0.1, 0.1, 0.6, np.nan, 0.1, 1.4, 1.9, 1.2, np.nan, np.nan, np.nan, np.nan, np.nan, 0.3, 1.0, np.nan, 0.5, np.nan, np.nan, 0.6, 0.8, 1.0, 5.0, np.nan, np.nan, 1.6, 0.6, 0.9, 0.4, 1.0, 1.2, 1.0, 0.2, 1.3])
+    burst_table = pd.read_csv("../data/Berger 2014 - Table 2.csv")
+    name, L_B = burst_table["GRB"].values, burst_table["LB"].values
+    #Flux complete from D'Avanzo 2014 #130515A not in Berger sample, 090426c, 111117Ac excluded
+    flux_complete = ["051221A", "060313", "061201", "070714B", "080123", "080503", "080905A", "090426c", "090510", "090515", "100117A", "100625A", "101219A", "111117Ac", "130515A", "130603B"]
+
+    # Filter for names
+    complete_L_B = [ii for ii, kk in enumerate(name) if kk in flux_complete]
+    print(len(complete_L_B))
+    complete = True
+    if complete == True:
+        L_B = L_B[complete_L_B]
+    # print(np.nanmean(L_B))
+    # exit()
     #Exclude nans
     L_B_nonan = L_B[~np.isnan(L_B)]
     # Length of list
@@ -39,10 +52,12 @@ def main():
     lnbrigter = len(L_B[L_B > L_B_star])
     #Redshift completeness
     print("Redshift completeness:")
+    print(lnredshifts, ln)
     print(lnredshifts/ln)
     print()
     #Brighter than:
     print("Brighter than:")
+    print(lnbrigter, lnredshifts)
     print(1 - lnbrigter/lnredshifts)
     print()
     # print(len(L_B[L_B > 1.17]))
