@@ -216,18 +216,19 @@ observations. The nebular lines exhibit a spatial extent of $\sim$ 1\farc5 and
 show significant velocity structure along the slit. A drop in the continuum
 bluewards of the \lya~line further supports the inferred redshift.
 
-%The total extent of the lines in velocity space is $\sim$ 450 km/s. The line
-% profiles shows an asymmetric "double-horned" profile, indicating that we are
-% seeing a galaxy with a large degree of coherent rotational motion relative to
-% the line-of-sight. If we assume that we are viewing a spiral galaxy exactly
-% edge-on, this is a measure of the rotational velocity of the gas. If we assume
-% that the spectral resolution and the turbulent width of the lines are
-% negligible compared to the rotational velocity, we can based on the projected
-% size of the source and the width of the lines, put a constraint on the
-% dynamical mass of the galaxy. Based on the physical scale from extent and the
-% velocity with, we infer M$_\text{dyn} \gtrsim 10^{10.8}$ M$_\odot$. Because we
-% are viewing the host at an angle, this value is an upper limit, which should
-% be divided by $\sin(i)$, where $i$ is the inclination relative to edge-on.
+The total extent of the lines in velocity space is $\sim$ 450 km/s. The line
+profiles shows an asymmetric "double-horned" profile, indicating that we are
+seeing a galaxy with a large degree of coherent rotational motion relative to
+the line-of-sight. If we assume that we are viewing a spiral galaxy edge-on,
+this is a measure of the rotational velocity of the gas. If we assume that the
+spectral resolution and the turbulent width of the lines are negligible compared
+to the rotational velocity, we can, based on the projected size of the source
+and the width of the lines, put a constraint on the dynamical mass of the galaxy
+\citep{DeBlok2014}. Based on the physical size along the slit and the velocity
+width of \oiii$\lambda5007$, we infer M$_\text{dyn} \gtrsim 10^{10.8}$
+M$_\odot$. Because we are viewing the host at an angle, this value is an upper
+limit, which should be divided by $\sin(i)$, where $i$ is the inclination
+relative to edge-on.
 
 Using the luminosity of \ha, we can infer the star-formation rate (SFR) of a
 galaxy \citep{Kennicutt1998}. At the redshift of the GRB host, \ha~is observed
@@ -335,7 +336,7 @@ Because the projected distance does not change significantly between $z = 1.3$ a
 relating to host offset are unaffected.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Classification}
+\subsection{Classification} \label{classification}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 As pointed out by \citet{Margutti2012} and \citet{Sakamoto2013}, GRB~111117A is
@@ -381,21 +382,22 @@ mergers.
 We show the recalculated $N_\mathrm{H}$ in Fig.~\ref{fig:NH_z} where we compare
 with the distributions of complete samples of both long and short GRBs. The lGRB
 sample is from \citet{Arcodia2016} and the sGRB sample is from
-\citet{DAvanzo2014a}. Both comparison samples consider the largest temporal
-interval of constant hardness ratio to prevent spectral changes that can affect
-the X-ray derived column density. The 17 (5) of the 99 (16) long (short) GRBs
-which do not have redshift have been excluded from our analysis.
+\citet{DAvanzo2014a}. From the sGRB sample of \citet{DAvanzo2014a} we have
+excluded GRB~090426 which does not belong in a short sample as highlighted in
+Sect. \ref{classification}. Both comparison samples consider the largest
+temporal interval of constant hardness ratio to prevent spectral changes that
+can affect the X-ray derived column density. The 17 (5) of the 99 (15) long
+(short) GRBs which do not have redshift have been excluded from our analysis.
 
 GRB~111117A occupies a unique position in Fig.~\ref{fig:NH_z} with the highest
-$N_H$ of all short bursts. Additionally the upper limit at $z = 2.609$ belongs
-to GRB~090426 and does not belong in the short sample. The short sample,
-excluding GRB~111117A, is located at low redshifts ($z < 1$) and is found to
-populate a column density environment similar to that of lGRBs at comparable
-redshifts \citep{DAvanzo2014a}. The inferred hydrogen column density for
-GRB~111117A seems to follow the trend with increasing $N_H$ as a function of
-redshift as found for the lGRB afterglows \citep{Arcodia2016}. This is similar
-to what is found by \citet{Kopac2012, Margutti2013}, that $N_H$ seems to be
-comparable for long and short GRBs when compared at similar redshifts.
+$N_H$ and highest redshift of all sGRBs. The short sample, excluding
+GRB~111117A, is located at low redshifts ($z < 1$) and is found to populate a
+column density environment similar to that of lGRBs at comparable redshifts
+\citep{DAvanzo2014a}. The inferred hydrogen column density for GRB~111117A seems
+to follow the trend with increasing $N_H$ as a function of redshift as found for
+the lGRB afterglows \citep{Arcodia2016}. This is similar to what is found by
+\citet{Kopac2012, Margutti2013}, that $N_H$ seems to be comparable for long and
+short GRBs when compared at similar redshifts.
 
 For lGRBs, $N_H$ correlates with the surface luminosity at the explosion site
 \citep{Lyman2017}, which is a challenge to reconcile with the relatively large
@@ -417,7 +419,7 @@ traverses a region of star formation.
 % 	\centering
 % 	\includegraphics[width=9cm]{figures/Eiso_z.pdf}
 % 	\caption{Isotropic equivalent energy for all the representative samples of both long and short GRBs. The sample is from \citet{Turpin2015} and the short is from \citet{DAvanzo2014a}.}
-% 	\label{fig:NH_z}
+% 	\label{fig:Eiso_z}
 % \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -426,20 +428,25 @@ traverses a region of star formation.
 
 From the clear host association, GRB~111117A does not belong to the hostless
 class of GRBs \citep{Berger2010a} and because the host exhibits emission lines
-this is indicative of a population of relatively young stars.
-As the majority of sGRBs \citep{Fong2013b}, the host of GRB~111117A is a
-late-type galaxy and is entirely consistent in terms of stellar mass and stellar
-age with the general population of sGRB hosts ($\left\langle M _*
-\right\rangle = 10^{10.1} M_{\odot}$ and $\left\langle \tau _* \right\rangle =
-0.3 $~Gyr) \citep{Leibler2010}. Being a late-type host, both the stellar mass
-and sSFR are entirely within the range expected for the hosts of sGRBs
-\citep{Behroozi2014}. The SFR is $\sim$1 order of magnitude higher than the
-typical SFR for sGRB host galaxies \citep{Berger2014} and more similar to
-the SFR found in the hosts of lGRBs at a corresponding redshift
-\citep{Kruhler2015}. The high SFR is partly a selection effect, because a less
-star forming galaxy would exhibit weaker emission lines, thus making the
-redshift harder to determine. Additionally, it is natural to expect some
-evolution in the hosts of sGRBs with redshift as illustrated in Sect.~\ref{restnH}. 
+this is indicative of a population of relatively young stars. As the majority of
+sGRBs \citep{Fong2013b}, the host of GRB~111117A is a late-type galaxy and is
+entirely consistent in terms of stellar mass and stellar age with the general
+population of sGRB hosts ($\left\langle M _* \right\rangle = 10^{10.1}
+M_{\odot}$ and $\left\langle \tau _* \right\rangle = 0.3 $~Gyr)
+\citep{Leibler2010}. Being a late-type host, both the stellar mass and sSFR are
+entirely within the range expected for the hosts of sGRBs \citep{Behroozi2014}.
+
+The SFR is $\sim$1 order of magnitude higher than the typical SFR for sGRB host
+galaxies \citep{Berger2014} and more similar to the SFR found in the hosts of
+lGRBs at a corresponding redshift \citep{Kruhler2015}. Only two hosts in the
+sample of short GRBs compiled in \citet{Berger2014} have a more vigorous star
+formation, meaning that it is in the very upper end of the star formation
+distribution. The cosmic SFR evolution of the universe likely plays a role due
+to the proximity of GRB~111117A to the peak of cosmic SFR \citep{Madau2014}.
+The high SFR is partly a selection effect, because a less star forming galaxy
+would exhibit weaker emission lines, thus making the redshift harder to
+determine. Additionally, it is natural to expect some evolution in the hosts of
+sGRBs with redshift as illustrated for $N_H$ in Sect.~\ref{restnH}.
 
 The detection of \lya~is consistent with the SED-inferred absence of dust,
 despite the moderate stellar age which would suggest the opposite. The centroid
@@ -585,11 +592,13 @@ All data, code and calculation related to the paper along with the
 paper itself are available at \url{https://github.com/jselsing/GRB111117A}.
 
 \begin{acknowledgements}
+	
 TK acknowledges support through the Sofja Kovalevskaja Award to P. Schady. 
 CT acknowledges support from a Spanish National Research Grant of Excellence under project AYA 2014-58381-P and funding associated to a Ramón y Cajál fellowship under grant number RyC-2012-09984.
 AdUP acknowledges support from a Ramón y Cajal fellowship, a BBVA Foundation Grant for Researchers and Cultural Creators,and the Spanish Ministry of Economy and Competitiveness through project AYA2014-58381-P.
 Partly based on observations made with the Gran Telescopio Canarias (GTC).
 ZC acknowledges support from the Spanish research project AYA 2014-58381-P and support from Juan de la Cierva Incorporaci\'on fellowships IJCI-2014-21669. 
+RSR acknowledges AdUP's BBVA Foundation Grant for Researchers and Cultural Creators
 
 \end{acknowledgements}
 

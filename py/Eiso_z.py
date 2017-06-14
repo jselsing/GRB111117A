@@ -12,11 +12,11 @@ from scipy import stats
 import matplotlib as mpl
 
 params = {
-   'axes.labelsize': 10,
-   'font.size': 10,
-   'legend.fontsize': 10,
-   'xtick.labelsize': 10,
-   'ytick.labelsize': 10,
+   'axes.labelsize': 16,
+   'font.size': 12,
+   'legend.fontsize': 12,
+   'xtick.labelsize': 16,
+   'ytick.labelsize': 16,
    'text.usetex': False,
    'figure.figsize': [7.281, 4.5]
    }
@@ -77,6 +77,10 @@ def main():
     burst_table = pd.read_csv("../data/Comparison sample - Short.csv")
     name, z_short, Eiso_short = burst_table["GRB"].values, burst_table["z"].values, burst_table["Eiso"].values
 
+    # Remove GRB090426
+    idx = np.where(name == "090426")[0]
+    name, z_short, Eiso_short = np.delete(name, idx), np.delete(z_short, idx), np.delete(Eiso_short, idx)
+
     Eiso_short = np.log10(filt_nan(Eiso_short, fill_value=np.nan)*1e51)
 
 
@@ -122,7 +126,7 @@ def main():
 
 
     # Save figure for tex
-    pl.legend()
+    pl.legend(loc=4)
     pl.savefig("../figures/Eiso_z.pdf", dpi="figure")
     pl.show()
 

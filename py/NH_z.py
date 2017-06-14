@@ -87,6 +87,10 @@ def main():
     burst_table = pd.read_csv("../data/Comparison sample - Short.csv")
     name, z_short, NH_short = burst_table["GRB"].values, burst_table["z"].values, burst_table["NH(z)"].values
 
+    # Remove GRB090426
+    idx = np.where(name == "090426")[0]
+    name, z_short, NH_short = np.delete(name, idx), np.delete(z_short, idx), np.delete(NH_short, idx)
+
     NH_short_dec = np.log10(1e21*filt_nan(NH_short, fill_value=np.nan))
     NH_short_lim = np.log10(1e21*np.array([float(ii[1:]) for ii in NH_short[np.isnan(NH_short_dec)]]))
 
@@ -133,7 +137,6 @@ def main():
     color = sns.color_palette()[0]
     g.x = z_short_dec
     g.y = NH_short_dec
-    print(g.y)
     g = g.plot_marginals(sns.distplot, hist=False, rug=True, kde=False, color=color, rug_kws={"height": 0.7, "lw": 2.0})
     g = g.plot_joint(pl.scatter, color=color, label="D'Avanzo et al. 2014")
     g.x = z_short_lim
@@ -145,17 +148,9 @@ def main():
     g.y = 1
     g = g.plot_joint(pl.plot, color=sns.color_palette()[2], label="Arcodia et al. 2016")
 
-
-
-
-
     ax = pl.gca()
-    # ax.axhline(0.5, color="black", linestyle="dashed", alpha=0.5)
-    # ax.annotate(r"$\beta_{OX} = 0.5$", (19.6, 0.45))
     g.set_axis_labels(r"z", r"log(N$_H$) [cm$^{-2}$]")
     pl.tight_layout()
-
-
 
     # Save figure for tex
     pl.legend(loc=1)
