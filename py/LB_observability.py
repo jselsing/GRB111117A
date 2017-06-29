@@ -37,7 +37,7 @@ def main():
     # Filter for names
     complete_L_B = [ii for ii, kk in enumerate(name) if kk in flux_complete]
     print(len(complete_L_B))
-    complete = True
+    complete = False
     if complete == True:
         L_B = L_B[complete_L_B]
     # print(np.nanmean(L_B))
