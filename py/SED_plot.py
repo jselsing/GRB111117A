@@ -6,6 +6,8 @@ from __future__ import division, print_function
 import numpy as np
 from scipy.interpolate import interp1d
 from scipy.signal import medfilt
+import astropy.units as u
+import astropy.constants as c
 
 # Plotting
 import matplotlib.pyplot as pl
@@ -24,24 +26,15 @@ params = {
    }
 mpl.rcParams.update(params)
 
-
-def jansky_to_AB(jansky):
-    return 23.9 - 2.5*np.log10(jansky)
-
-def AB_to_jansky(AB):
-    return 10**((23.9 - AB)/2.5)
-
-
 def main():
     # Small script to plot SED, photometry and spectrum
 
     # Load data
-    spectrum = np.genfromtxt("../data/stitched_spectrum_bin1.dat")
-    wl_spec = spectrum[:, 0]
-    flux_spec = spectrum[:, 1]
-    error_spec = spectrum[:, 2]
-    # pl.plot(wl_spec, flux_spec)
-    # pl.show()
+    spectrum = np.genfromtxt("../data/spectroscopy/stitched_spectrum_bin5.dat")
+    wl_spec = spectrum[:, 0] * u.AA
+    flux_spec = spectrum[:, 1] * (u.erg/(u.s * u.cm**2 * u.AA))
+    error_spec = spectrum[:, 2] * (u.erg/(u.s * u.cm**2 * u.AA))
+
     SED = np.genfromtxt("../data/SED.dat")
     wl_SED = SED[:, 0]
     AB_SED = SED[:, 1]
@@ -52,29 +45,14 @@ def main():
     magerr = phot[:, 1][magmask]
     wl_phot = phot[:, 2][magmask]
     wl_plot_wid = phot[:, 3][magmask]/2.35
-    # pl.scatter(wl_phot, mag)
-    # print(phot[:, 2])
-    # print(phot[:, 3])
-    # exit()
 
+    AB = flux_spec.to(u.ABmag, u.spectral_density(wl_spec))
 
-    nu = 3e5/(wl_spec*1e-13) # nu
-    f_nu = (flux_spec*(1e-13*(wl_spec**2.))/3e5)/1e-29
-    f_nu[f_nu <= 0] = 0.1
-    f_nu_err = (error_spec*(1e-13*(wl_spec**2.))/3e5)/1e-29
-    f_nu_err[f_nu_err <= 0] = 1
-
-
-    AB = -2.5*np.log10(flux_spec) - 5*np.log10(wl_spec) - 2.406
-
-    AB_err_hi = -2.5*np.log10(flux_spec + error_spec) - 5*np.log10(wl_spec) - 2.406
-    print(AB - AB_err_hi)
-    AB_err_lo = -2.5*np.log10(flux_spec - error_spec) - 5*np.log10(wl_spec) - 2.406
 
     # pl.errorbar(wl_spec, AB, yerr=[AB - AB_err_lo, AB_err_hi - AB], fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3, label="X-shooter spectrum", zorder=1)
     pl.errorbar(wl_phot, mag, xerr=wl_plot_wid, yerr=magerr, fmt=".", capsize=0, ms=20, color = "#4C72B0", label = "Photometric points", zorder=3, mec="black", mew = 1)
     # pl.errorbar(wl_spec, AB, fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3)
-    pl.plot(wl_spec[::3], AB[::3], color="black", linestyle="steps-mid", lw=0.3, alpha=0.3, label="X-shooter spectrum", zorder=1)
+    pl.plot(wl_spec[::1], AB[::1], color="black", linestyle="steps-mid", lw=0.3, alpha=0.3, label="X-shooter spectrum", zorder=1)
     pl.plot(wl_SED, AB_SED, linestyle="steps-mid", lw=2.0, color = "#C44E52", label = "SED fit", zorder=2)
     # pl.axhline(0, linestyle="dashed", color = "black", lw = 0.4)
     pl.legend(loc=2)

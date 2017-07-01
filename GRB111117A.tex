@@ -43,7 +43,7 @@
 
 \begin{document}
 	
-\title{The host galaxy of the short GRB~111117A at $z = 2.211$\thanks{Based on observations collected at ESO/VLT under programme 088.A-0051 and 091.D-0904, at TNG under programme A24TAC\_38, at Gemini North under programme GN-2011B-Q-10 and GTC under programme GTC43-11B.}}
+\title{The host galaxy of the short GRB~111117A at $z = 2.211$: impact on the short GRB redshift distribution and progenitor channels\thanks{Based on observations collected at ESO/VLT under programme 088.A-0051 and 091.D-0904, at TNG under programme A24TAC\_38, at Gemini North under programme GN-2011B-Q-10 and GTC under programme GTC43-11B.}}
 
 \titlerunning{GRB~111117A}
 
@@ -103,7 +103,7 @@ supports this idea and distinguishes the physical origin of sGRBs from their
 long-duration counterparts, \citep[albeit see also][]{Fynbo2006b, Valle2006, Gal-Yam2006}.
 
 The classification of GRBs in two groups, initially comes from the bimodal
-distribution of burst duration and spectral hardness \citet{Kouveliotou1993},
+distribution of burst duration and spectral hardness \citep{Kouveliotou1993},
 where the duration T$_{90} < 2$ has been regarded as the dividing line between long
 and short GRBs. Additionally, it has been found for lGRBs that there is a
 spectral lag in the arrival-time of photons, with the most energetic ones
@@ -132,7 +132,7 @@ star-formation rate (SFR).
 The electromagnetic signals from sGRBs are a promising channel to accurately
 localize NS mergers, which holds the promise for a detection of an associated
 gravitational wave (GW) signal \citep{Ghirlanda2016}. The simultaneous detection
-of a sGRB and a GW will provide new a promising ways to constrain the binary
+of a sGRB and a GW will provide new promising ways to constrain the binary
 inclination angle \citep{Arun2014} and measure cosmological distances
 \citep{Nissanke2010}.
 
@@ -192,7 +192,7 @@ and $\Omega_m = 0.307$. All magnitudes are given in the AB system.
 \begin{figure*}
 	\centering
 	\includegraphics[width=16cm]{figures/SEDspecphot.pdf}
-	\caption{SED fit showning the best-fist SED to the derived photometry. The detection of \lya~ is predicted from the SED fit and confirmed by the spectroscopic observations. Overplotted in grey is the observed spectrum. The reason for the spectral gaps at 5500 \AA~and 10000 \AA~is from the merging of the arms.}
+	\caption{SED fit showning the best-fist SED to the derived photometry. The detection of \lya~ is predicted from the SED fit and confirmed by the spectroscopic observations. Overplotted in grey is the observed spectrum, binned by 6 \AA~for presentation purposes. Slit losses are responsible for discrepancies between the measured photometry and the X-shooter spectrum. The reason for the spectral gaps at 5500 \AA~and 10000 \AA~is from the merging of the arms.}
 	\label{fig:SED}
 \end{figure*}
 
@@ -205,22 +205,19 @@ arcsec nod throws. X-shooter covers the wavelength range from 3000~\AA~to
 24\,800~\AA~(21\,000~\AA~when the $K$-band blocking filter is used) across three
 spectroscopic arms. We carried out the bias-correction, flat-fielding, order
 tracing, wavelength calibration, rectification, and flux calibration using the
-VLT/X-shooter pipeline version 2.8.4 \citep{Modigliani2010} run in physical
+VLT/X-shooter pipeline version 2.8.4 \citep{Goldoni2006, Modigliani2010} run in physical
 mode. Because the echelle orders are curved across each detector, a
 rectification algorithm is employed which introduces correlations between
 neighboring pixels. We select a pixel-scale of 0.2/0.2/0.6 \AA/pix for the
 UVB/VIS/NIR arm to minimize the degree of correlation while conserving the
 maximal resolution. The observations are combined and extracted using scripts
 described in Selsing et al. 2017 (in prep.) and available
-online\footnote{\url{https://github.com/jselsing/XSGRB_reduction_scripts}}. The
-signal-to-noise ratio of the continuum in the near-infrared arm is too low to
-use the optimal extraction algorithm \citep{Horne1986} and therefore the
-extraction is carried out with a simple aperture covering the entire host, where
-we sum the flux in the aperture and derive the error by summing the
-corresponding pixel errors in quadrature. An overview of the spectroscopic
-observations is given in Table~\ref{tab:spec_overview}, and the slit position is
-shown in Fig.~\ref{fig:spec_setup}. We show the extracted spectrum in
-Fig.~\ref{fig:SED}.
+online\footnote{\url{https://github.com/jselsing/XSGRB_reduction_scripts}},
+where the full spectral point spread function is modeled across each arm and
+used for the optimal extraction algorithm \citep{Horne1986}. An overview of the
+spectroscopic observations is given in Table~\ref{tab:spec_overview}, and the
+slit position is shown in Fig.~\ref{fig:spec_setup}. We show the extracted
+spectrum in Fig.~\ref{fig:SED}.
 
 \input{tables/spec_overview.tex}
 
@@ -264,13 +261,7 @@ and the width of the lines, put a constraint on the dynamical mass of the galaxy
 width of \oiii$\lambda5007$, we infer M$_\text{dyn} \gtrsim 10^{10.8}$
 M$_\odot$. Because we are viewing the host inclined at an angle relative to
 edge-on and because the slit is not aligned along the long axis of the host,
-this value is an upper limit. 
-
-A measure of the optical-to-X-ray flux ratio is parametrized in terms of the
-"darkness"-parameter $\beta_{OX} $ \citep{Jakobsson2004}. Using the optical
-afterglow limits \citep{Cucchiara2011, Cenko2011}, the X-ray lightcurve can be
-interpolated and evaluated at the time of the non-detection. We find $\beta_{OX}
-< 0.79$, consistent with what was reported in \citet{Sakamoto2013}.
+this value is a lower limit. 
 
 \subsection{Imaging observations and SED analysis} \label{SED}
 
@@ -281,8 +272,9 @@ faded. These new data are complemented by a re-analysis of some of the imaging
 used in \citet{Margutti2012} and \citet{Sakamoto2013} that are available to us
 (GTC $gri$-band, TNG $R$-band, and Gemini $z$-band). A log of the photometric
 observations and measured brightnesses is given in
-Table~\ref{tab:phot_overview}. Due to the optical darkness of this burst, there
-is likely no afterglow contamination on the measured photometry.
+Table~\ref{tab:phot_overview}. Due to the optical darkness of this burst, see
+Sect. \ref{xray}, there is likely no afterglow contamination on the measured
+photometry.
 
 All data were reduced, analyzed and fitted in a similar manner as described in
 detail in \citet{Kruhler2011a} and, more recently, in \citet{Schulze2016}.
@@ -322,7 +314,7 @@ value at the 1~$\sigma$ confidence level.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{X-ray temporal and spectral analysis}
+\subsection{X-ray temporal and spectral analysis}\label{xray}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We retrieved the automated data products provided by the \textit{Swift}-XRT GRB
@@ -341,6 +333,11 @@ an intrinsic equivalent hydrogen column density $N_{\mathrm{H}}$ of $2.4_{-1.6}^
 \times 10^{22}$~cm$^{-2}$ ($z=2.211$), assuming a solar abundance and a Galactic $N_{\mathrm{H}}$ in
 the burst direction of $4.1 \times 10^{20}$~cm$^{-2}$ \citep{Willingale2013}.
 
+A measure of the optical-to-X-ray flux ratio is parametrized in terms of the
+"darkness"-parameter $\beta_{OX} $ \citep{Jakobsson2004}. Using the optical
+afterglow limits \citep{Cucchiara2011, Cenko2011}, the X-ray lightcurve can be
+interpolated and evaluated at the time of the non-detection. We find $\beta_{OX}
+< 0.79$, consistent with what was reported in \citet{Sakamoto2013}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Reinterpretation of the restframe properties}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -437,12 +434,13 @@ GRB~111117A relative to the host center derived in \citet{Margutti2012} and
 the X-ray absorption. Along with the absence of dust, the large offset from the
 host center indicates that the high $N_H$ arises because the density in the GRB
 surrounding is high, or because the light from the afterglow traverses a region
-of dense gas.
+of dense gas. The optical darkness of the GRB is an additional hint of the high
+density in the GRB surroundings or along the line of sight.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=9cm]{figures/NH_z.pdf}
-	\caption{Rest frame, X-ray derived equivalent hydrogen column densities for GRB~111117A compared to complete samples of both long and short populations of GRBs. The detections are replaced with contours and the limits are shown with arrows.}
+	\caption{Rest frame, X-ray derived equivalent hydrogen column densities for GRB~111117A compared to complete samples of both long and short populations of GRBs. The detections are replaced with contours and the limits are shown with arrows. Marginalizations over both axes are shown where the limits are shown as transparent bars and detections as solid ones.}
 	\label{fig:NH_z}
 \end{figure}
 
@@ -521,10 +519,10 @@ $L_B/L^{\star}_{B}$ from \citet{Berger2014}, the host of GRB~111117A is brighter
 than 73 per cent.
 
 If we assume that we are able to obtain emission-line redshifts from hosts, 0.5
-mags fainter \citep[$R < 24.5$~mag;][]{Kruhler2012}, then we would have missed 60
-per cent of the redshifts (6 out of 10 hosts), were they at the redshift of
-GRB~111117A due to the hosts being too faint. The corresponding number is around
-45 per cent (12 out of 26) from the full sample of \citet{Berger2014},
+mags fainter \citep[$R < 24.5$~mag;][]{Kruhler2012}, then we would have missed
+60 per cent of the redshifts (6 out of 10 hosts), due too the host being too
+faint, were they at the redshift of GRB~11117A. The corresponding number is
+around 45 per cent (12 out of 26) from the full sample of \citet{Berger2014},
 reflecting the lower mean $L_B/L^{\star}_{B}$ of the complete sample. Because
 the average SFR of galaxies hosting lGRBs is higher than for galaxies hosting
 sGRBs, the fraction of missed burst redshifts is likely higher although the
@@ -551,7 +549,8 @@ critically on the absence of non-collapsar sGRBs at $z \gtrsim 1.2$. The higher
 determined redshift of GRB~111117A, and the likely number of additional high-z
 sGRB could change the preferred time delay models. The redshift of GRB~111117A,
 on the other hand, is close to the expected peak in sGRB rate calculated using
-the power law delay time models \citep{Behroozi2014, Wanderman2015}.
+the power law delay time models \citep{Behroozi2014, Wanderman2015,
+	Ghirlanda2016}, meaning we could be missing a large fraction of sGRBs.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -578,11 +577,20 @@ eccentricities > 0.6 to significantly shorten the merger time.
 Using the inferred stellar population age from our SED fit, then we obtain a
 (softer) limit on the initial separation of $a_0 < 2.1~R_\odot$. However, this
 does not account for the possibility there could be an underlying stellar
-population of older stars from a previous star-formation epoch. The delay time
-between formation and explosion is well accommodated by the models of
-\citet{Belczynski2006}, although the longest delay times are excluded.
-This is especially true given the late type nature of the host
-\citep{OShaughnessy2008}.
+population of older stars from a previous star-formation epoch. To investigate
+the possible impact of the presence of an old stellar population, we followed
+\citet{Papovich2001} and re-fitted the observed SED with the best-fit template
+to which an additional stellar population of old stars was added. For each
+galaxy, this old population was set as the SPSs with same parameters that the
+best-fit SED excepts the age, which was set to the age of the Universe at the
+observed redshift. In principle, this can constrain the maximum contribution of
+old populations within the photometric error bars \citep[see][ for
+details]{Papovich2001}. We find a negligible contribution to the stellar mass
+(i.e. variations much smaller than the statistical uncertainty associated with
+the best-fit template). The delay time between formation and explosion is well
+accommodated by the models of \citet{Belczynski2006}, although the longest delay
+times are excluded. This is especially true given the late type nature of the
+host \citep{OShaughnessy2008}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
@@ -598,11 +606,11 @@ the importance of deep spectroscopic studies of sGRB hosts at medium resolution.
 Using the new distance, the X-ray derived $N_H$ towards GRB~111117A is the
 highest within a complete sample of sGRB hosts and is consistent with the
 $N_H-z$ evolution traced by the hosts of lGRBs. The SFR of the host is in the
-upper end of the sGRB host SFR distribution and no dust is present. The high
-$N_H$ is difficult to reconcile with the large projected host offset and the
-absence of dust. One possible explanation could be, that GRB~111117A is formed
-through a prompt channel of sGRB formation and originates in a star forming
-region located in the outskirts of the host.
+upper end of the sGRB host SFR distribution and no significant amount of dust is
+present. The high $N_H$ is difficult to reconcile with the large projected host
+offset and the absence of dust. One possible explanation could be, that
+GRB~111117A is formed through a prompt channel of sGRB formation and originates
+in a star forming region located in the outskirts of the host.
 
 Although a single burst carries little leverage in terms of constraining the
 redshift distribution of sGRB, the high redshift of GRB~111117A needs to be
@@ -628,10 +636,12 @@ All data, code and calculations related to the paper along with the
 paper itself are available at \url{https://github.com/jselsing/GRB111117A}.
 
 \begin{acknowledgements}
-We thank Jens Hjorth and Lise Christensen for useful discussions regarding the interpretation of this event. 
+We thank Jens Hjorth and Lise Christensen for useful discussions regarding the interpretation of this event. We thank Mathieu Puech for testing the possible contribution from an older stellar population in the SED.
 %	
 TK acknowledges support through the Sofja Kovalevskaja Award to P. Schady.
-% 
+%
+SDV is supported by the French National Research Agency (ANR) under contract ANR-16-CE31-0003 BEaPro 
+%
 JJ acknowledges support from NOVA and NWO-FAPESP grant for advanced
 instrumentation in astronomy.
 %

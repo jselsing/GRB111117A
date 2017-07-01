@@ -29,7 +29,7 @@ def load_array(data_array, tell = None):
 
     if has_resp:
         try:
-            tellcorr = data_array[:, 8]
+            tellcorr = 1#data_array[:, 8]
             tellcorr[np.isnan(tellcorr)] = 1
             slitcorr = 1#np.median(data_array[:, 7])
             return data_array[:, 1], data_array[:, 2]*tellcorr*slitcorr, data_array[:, 3]*tellcorr*slitcorr, data_array[:, 4]
@@ -38,7 +38,7 @@ def load_array(data_array, tell = None):
             return data_array[:, 1], data_array[:, 2]*slitcorr, data_array[:, 3]*slitcorr, data_array[:, 4]
     elif not has_resp:
         try:
-            tellcorr = tell#data_array[:, 7]
+            tellcorr = 1#tell#data_array[:, 7]
             # print(tellcorr)
             tellcorr[np.isnan(tellcorr)] = 1
             slitcorr = 1#np.median(data_array[:, 6])
@@ -159,7 +159,7 @@ def main():
     # Small script to stitch X-shooter arms. Inspired by https://github.com/skylergrammer/Astro-Python/blob/master/stitch_spec.py
 
     # Load data from individual files
-    data_dir = "../data/"
+    data_dir = "../data/spectroscopy/"
 
     scale = False # True, False
 
@@ -179,7 +179,7 @@ def main():
     # Construct lists
     UVB_mask = (UVB_wl > 3300) & (UVB_wl < 5500)
     VIS_mask = (VIS_wl > 5700) & (VIS_wl < 9600)
-    NIR_mask = (NIR_wl > 12000) & (NIR_wl < 21000) & (NIR_flux > -1e-19)
+    NIR_mask = (NIR_wl > 10500) & (NIR_wl < 20500) #& (NIR_flux > -1e-19)
     waves = [UVB_wl[UVB_mask], VIS_wl[VIS_mask], NIR_wl[NIR_mask]]
     flux = [UVB_flux[UVB_mask], VIS_flux[VIS_mask], NIR_flux[NIR_mask]]
     error = [UVB_error[UVB_mask], VIS_error[VIS_mask], NIR_error[NIR_mask]]
@@ -190,7 +190,7 @@ def main():
 
     np.savetxt(data_dir + "stitched_spectrum.dat", zip(wl, flux, error, bpmap), fmt = ['%10.6e', '%10.6e', '%10.6e', '%10.6f'], header=" wl flux error bpmap")
 
-    hbin = 1
+    hbin = 5
     wl_bin, flux_bin, error_bin, bp_bin = bin_spectrum(wl, flux, error, bpmap.astype("bool"), hbin, weight=True)
 
 
