@@ -231,23 +231,29 @@ show significant velocity structure along the slit. A drop in the continuum
 bluewards of the \lya~line further supports the inferred redshift.
 
 Using the luminosity of \ha, we can infer the star-formation rate (SFR) of the
-host \citep{Kennicutt1998}. At the redshift of the GRB host, \ha~is observed
-at 21\,000~\AA~where the night sky is very bright. In addition, several bright
+host \citep{Kennicutt1998}. At the redshift of the GRB host, \ha~is observed at
+21\,000~\AA~where the night sky is very bright. In addition, several bright
 sky-lines are superposed on the line, making an accurate estimate of the
-\ha-flux difficult. We obtain a limit on the SFR by numerically integrating the
-part of \ha~free of contamination and correcting for the missing flux using the
-line profile and obtain $F_{H \alpha} > 4.1 \times 10^{-17} \mathrm{erg}
-\mathrm{s}^{-1} \mathrm{cm}^{-2}$. After converting the \citet{Kennicutt1998}
-relation to a \citet{Chabrier2003} initial mass function using
-\citet{Madau2014}, we derive a limit of $SFR > 7 M_\odot$~yr$^{-1}$.
-Additionally, based on the width of \oiii, an aperture covering the line is
-integrated over, where synthetic sky lines \citep{Noll2012, Jones2013} have been
-masked and interpolated over. From the integrated \ha-line, we estimate SFR =
-$18 \pm 3$ M$_\odot$ yr$^{-1}$. From the SED-fit (Sect.~\ref{SED}), and the
-detection of \lya, the host is constrained to contain very little or no dust,
-although the presence of Lya does not exclude dust. Therefore we do not apply a
-dust-correction to the measured \ha~flux here. \oii~is close to a region of
-strong telluric absorption, which is why no SFR is inferred from this line.
+\ha-flux difficult. Due to their velocity structure, the lines exhibit clear
+deviations from a Gaussian. Given the low S/N of the spectra we do not attempt
+any parametric fits. We thus obtain a limit on the SFR by numerically
+integrating the part of \ha~free of contamination and obtain $F_{H \alpha} > 4.1
+\times 10^{-17} \mathrm{erg} \mathrm{s}^{-1} \mathrm{cm}^{-2}$. After converting
+the \citet{Kennicutt1998} relation to a \citet{Chabrier2003} initial mass
+function using \citet{Madau2014}, we derive a limit of $SFR > 7
+M_\odot$~yr$^{-1}$. 
+%Additionally, based on the width of \oiii, an aperture
+%covering \ha is integrated over, where sky lines have been masked and
+%interpolated over, using a synthetic sky spectrum \citep{Noll2012, Jones2013}.
+%From the integrated \ha-line, we estimate SFR = $18 \pm 3$ M$_\odot$ yr$^{-1}$.
+%The error on the SFR is derived from the integrated variance spectrum over the
+%\ha-line and excluding the intrinsic scatter of the relation. 
+From the SED-fit
+(Sect.~\ref{SED}), and the detection of \lya, the host is constrained to contain
+very little or no dust, although the presence of Lya does not exclude dust.
+Therefore we do not apply a dust-correction to the measured \ha~flux here.
+\oii~is close to a region of strong telluric absorption, which is why no SFR is
+inferred from this line.
 
 The total extent of the lines in velocity space is $\sim$ 450 km/s. The line
 profiles shows an asymmetric "double-horned" profile, indicating that we are
@@ -272,41 +278,68 @@ faded. These new data are complemented by a re-analysis of some of the imaging
 used in \citet{Margutti2012} and \citet{Sakamoto2013} that are available to us
 (GTC $gri$-band, TNG $R$-band, and Gemini $z$-band). A log of the photometric
 observations and measured brightnesses is given in
-Table~\ref{tab:phot_overview}. Due to the optical darkness of this burst, see
-Sect. \ref{xray}, there is likely no afterglow contamination on the measured
-photometry.
+Table~\ref{tab:phot_overview}. Most data were taken long after the GRB when no
+afterglow contribution was present. Given the faintness of the afterglow (see
+Sect. \ref{xray}, and \citealt{Cucchiara2011, Cenko2011}), we also expect
+negligible contribution to the earliest epochs, which is confirmed by the
+consistency between the two $g$-band measurements.
 
 All data were reduced, analyzed and fitted in a similar manner as described in
 detail in \citet{Kruhler2011a} and, more recently, in \citet{Schulze2016}.
 Briefly, we use our own \texttt{Python} and IRAF routines to perform a standard
-reduction which includes bias/flat-field correction, de-fringing (if necessary),
-sky-subtraction, and stacking of individual images. The photometry of the host
-was calibrated relative to field stars from the SDSS and 2MASS catalogs in the
-case of $grizJHK_{\mathrm{s}}$ filters.
-For the $R$ and $I$-band photometry, we used the color transformations of
-Lupton\footnote{\url{https://www.sdss3.org/dr8/algorithms/sdssUBVRITransform.php}}. 
-We convert all magnitudes into the AB system, and correct for a Galactic 
-foreground of $E_{B-V}=0.027~\mathrm{mag}$ \citep{Schlegel1998, Schlafly2011}.
+reduction which includes bias/flat-field correction, de-fringing (where
+necessary), sky-subtraction, and stacking of individual images. On the final
+reduced products, seeing-matched aperture photometry was carried out using
+\texttt{Source Extractor} \citep{Bertin1996} where the size of the aperture was
+chosen to be twice the seeing FWHM. (THOMAS! WAS THE APERTURE FIXED BETWEEN
+FILTERS AND IS THIS CORRECT?) Photometric calibration was fixed relative to
+field stars from the SDSS and 2MASS catalogs in the case of $griz$ and
+$JHK_{\mathrm{s}}$ filters, respectively. For the $R$- and $I$-band photometry,
+we used the color transformations of Lupton%
+\footnote{\url{https://www.sdss3.org/dr8/algorithms/sdssUBVRITransform.php}}. We
+convert all magnitudes into the AB system, and correct for a Galactic foreground
+of $E_{B-V}=0.027~\mathrm{mag}$ \citep{Schlegel1998, Schlafly2011}.
+
+Noteworthy is the discrepancy of both our new VLT/FORS2 photometry and the
+re-analysis of the Gemini data compared to the $z$-band measurements of
+\citet{Margutti2012} and \citet{Sakamoto2013}. Both of these authors report
+$z$-band magnitude that is brighter by 0.8-1.0 mag compared to our value, where
+data taken in other filters are consistent within the errors. Visual inspection
+of the Gemini image shows only a marginal detection of the host, which we report
+here as a $\sim$ 2-$\sigma$ measurement. More conservatively, the 3-$\sigma$
+upper limit for the Gemini image is $z > 24.06$. Objects of magnitude $z \sim
+23.2$ are clearly seen and are significantly brighter than the GRB host galaxy.
+The consistency between the deeper FORS2 $z$-band image and the upper limit
+derived for the Gemini image lends credence to the inferred magnitudes, see
+Fig. \ref{photplot}. 
+
 
 \input{tables/phot_overview.tex}
 
-The multi-color SED is fit using the \citet{Bruzual2003} single stellar population
-models based on a \citet{Chabrier2003} with initial mass function in
+The multi-color SED is fit using the \citet{Bruzual2003} single stellar
+population models based on a \citet{Chabrier2003} with initial mass function in
 \emph{LePhare} \citep{Ilbert2006}, where the redshift is fixed to the
-spectroscopic value of $z=2.211$. The best fit model is an unreddened galaxy
+spectroscopic value of $z=2.211$. For the SED fitting, we create a grid of
+templates consisting of $\sim 10^6$  different galaxy templates with four
+metallicities 0.02, 0.2, 0.4, 1.0 $Z_{\odot}$, different ages, star-formation
+histories and degrees of extinction. For every model, we calculate the
+likelihood, and create a probability density function (PDF) for a given
+parameter by marginalizing over the other parameters. We quote the median of the
+PDF as the best fit parameters and the errors are the 16th and 84th percentiles
+of the PDFs \citep[e.g. see][for details on the SED fitting
+procedure]{Schulze2016}.
+
+The best fit model is an unreddened galaxy
 template, and returns physical parameters of absolute magnitude
 ($M_B=-22.0\pm0.1$\,mag), stellar mass ($\log(M_{\star}/M_\odot) = 9.9\pm0.2$),
 stellar population age ($\tau = 0.5_{-0.3}^{+0.5}$ Gyr) and star-formation rate
 ($SFR_{\mathrm{SED}}=11_{-4}^{+9} M_\odot\,\mathrm{yr}^{-1}$). We show the SED
 fit in Fig.~\ref{fig:SED}.
 
-Noteworthy is the discrepancy of our new VLT/FORS2 photometry and the
-re-analysis of the Gemini data to the $z$-band measurements of
-\citet{Margutti2012} and \citet{Sakamoto2013}. Both of these authors report
-$z$-band photometry that is brighter by 0.8~mag to 1.0 mag compared to our
-value, where data taken in bluer filters are in excellent agreement. The large
-$i-z$ color was mistakenly interpreted as a 4000\,\AA\,break driving the galaxy
-photometric redshift of the earlier works. Using the revised photometry from
+
+The large $i-z$ color was mistakenly interpreted as a 4000\,\AA~ break driving
+the galaxy photometric redshift of the earlier works. Even without fixing the
+redshift to the spectroscopic value, using the revised photometry from
 Table~\ref{tab:phot_overview}, the photometric redshift of the galaxy is
 $z_{\mathrm{phot}}=2.04_{-0.21}^{+0.19}$, consistent with the spectroscopic
 value at the 1~$\sigma$ confidence level.
