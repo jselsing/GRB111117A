@@ -46,7 +46,7 @@ def main():
     # Script to get lineflux
     """
     # Get extraction
-    data = np.genfromtxt("../data/NIRext.dat", dtype=None)
+    data = np.genfromtxt("../data/spectroscopy/NIRext.dat", dtype=None)
     # data = np.genfromtxt("../data/NIROB4skysubstdext.dat", dtype=None)
     # print(np.std([18, 31, 38, 20]))
     # exit()
@@ -55,7 +55,7 @@ def main():
     error = data[:, 3]
     error[error > 1e-15] = np.median(error)
     # Load synthetic sky
-    sky_model = fits.open("../data/NIRskytable.fits")
+    sky_model = fits.open("../data/spectroscopy/NIRskytable.fits")
     wl_sky = 10*(sky_model[1].data.field('lam')) # In nm
     # Convolve to observed grid
     f = interpolate.interp1d(wl_sky, convolve(sky_model[1].data.field('flux'), Gaussian1DKernel(stddev=3)), bounds_error=False, fill_value=np.nan)
@@ -70,11 +70,11 @@ def main():
     flux = g(wl)
 
 
-    mask = (wl > convert_air_to_vacuum(21077) - 20) & (wl < convert_air_to_vacuum(21077) + 20)
+    mask = (wl > convert_air_to_vacuum(21076) - 9) & (wl < convert_air_to_vacuum(21076) + 9)
     # mask = (wl > 21020) & (wl < 21150)
-    F_ha = np.trapz(flux[mask])
+    F_ha = np.trapz(flux[mask], x=wl[mask])
     print("Total %0.1e" %F_ha)
-    F_ha_err = np.sqrt(np.trapz((error**2.)[mask]))
+    F_ha_err = np.sqrt(np.trapz((error**2.)[mask], x=wl[mask]))
     print("Total %0.1e +- %0.1e" % (F_ha, F_ha_err))
     # exit()
     # F_ha = 4.1e-17

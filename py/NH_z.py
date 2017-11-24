@@ -105,8 +105,10 @@ def main():
     cmap = sns.blend_palette(colors, as_cmap=True)
     g = g.plot_marginals(sns.distplot, hist=False, color=color)
     g = g.plot_joint(sns.kdeplot, cmap=cmap, label="Arcodia et al. 2016", zorder=1)
+    # g = g.plot_joint(pl.scatter, cmap=cmap, label="Arcodia et al. 2016", zorder=1)
     # g = g.plot_marginals(sns.distplot, hist=False, rug=True, kde=False, color=color, rug_kws={"height": 0.7, "lw": 2.0})
     # g = g.plot_joint(pl.scatter, color=color, label="Arcodia et al. 2016")
+    print(z_long_uplim, NH_long_uplim)
     g.x = z_long_uplim
     g.y = NH_long_uplim
     g = g.plot_marginals(sns.distplot, hist=False, rug=True, kde=False, color=color, rug_kws={"height": 0.7, "lw": 2.0, "alpha": 0.5})
@@ -149,7 +151,7 @@ def main():
     g = g.plot_joint(pl.plot, color=sns.color_palette()[2], label="Arcodia et al. 2016")
 
     ax = pl.gca()
-    g.set_axis_labels(r"z", r"log(N$_H$) [cm$^{-2}$]")
+    g.set_axis_labels(r"z", r"log($N_\mathrm{H}$) [cm$^{-2}$]")
     pl.tight_layout()
 
     # Save figure for tex

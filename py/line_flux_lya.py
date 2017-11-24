@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from __future__ import division, print_function
+
+
+
+# Plotting
+import matplotlib; matplotlib.use('TkAgg')
+import matplotlib.pyplot as pl
+import seaborn; seaborn.set_style('ticks')
+
 
 from astropy.io import fits
 import pandas as pd
-import matplotlib.pyplot as pl
-import seaborn as sns; sns.set_style('ticks')
 import numpy as np
 from scipy import stats, interpolate
 import matplotlib as mpl
@@ -46,62 +51,56 @@ def main():
     # Script to get lineflux
     """
     # Get extraction
-    data = np.genfromtxt("../data/NIRext.dat", dtype=None)
-    # data = np.genfromtxt("../data/NIROB4skysubstdext.dat", dtype=None)
-    # print(np.std([20.2, 36.5, 43.9, 25.6]))
-    # exit()
+    data = np.genfromtxt("../data/spectroscopy/UVBext_lya.dat", dtype=None)
+
     wl = data[:, 1]
+    wl_mask = (wl > 3850) & (wl < 3960)
+
     flux = data[:, 2]
     error = data[:, 3]
+
+    wl, flux, error = wl[wl_mask], flux[wl_mask], error[wl_mask]
+
     error[error > 1e-15] = np.median(error)
-    # Load synthetic sky
-    sky_model = fits.open("../data/NIRskytable.fits")
-    wl_sky = 10*(sky_model[1].data.field('lam')) # In nm
-    # Convolve to observed grid
-    f = interpolate.interp1d(wl_sky, convolve(sky_model[1].data.field('flux'), Gaussian1DKernel(stddev=7)), bounds_error=False, fill_value=np.nan)
-    # f = interpolate.interp1d(wl_sky, sky_model[1].data.field('flux'), bounds_error=False, fill_value=np.nan)
-    flux_sky = f(wl)
-    # flux[(wl > 21055) & (wl < 21068)] = 0
 
-    m = (flux_sky < 9000)
-    g = interpolate.interp1d(wl[m], flux[m], bounds_error=False, fill_value=np.nan)
-    flux = g(wl)
+    mask = (wl > convert_air_to_vacuum(3907) - 12) & (wl < convert_air_to_vacuum(3907) + 12)
 
+    continuum_fit = np.polynomial.chebyshev.chebfit(wl[~mask], flux[~mask], deg=2)
+    continuum = np.polynomial.chebyshev.chebval(wl, continuum_fit)
 
-    mask = (wl > convert_air_to_vacuum(16079) - 12) & (wl < convert_air_to_vacuum(16079) + 12)
+    pl.plot(wl, continuum - continuum)
 
-    F_oiii = np.trapz(flux[mask])
-    # print("Toal %0.1e" %F_oiii)
-    # exit()
-    F_oiii_err = np.sqrt(np.trapz((error**2.)[mask]))
+    flux = flux - continuum
+
+    F_lya = np.trapz(flux[mask], x=wl[mask])
+    print("Total %0.1e" %F_lya)
+
+    F_lya_err = np.sqrt(np.trapz((error**2.)[mask], x=wl[mask]))
 
 
     dL = cosmo.luminosity_distance(2.211).to(u.cm).value
-    L_oiii = F_oiii * 4 * np.pi * dL**2
-    L_oiii_err = F_oiii_err * 4 * np.pi * dL**2
-    SFR = 7.9e-42*L_oiii
-    SFR_err = 7.9e-42*L_oiii_err
+    L_lya = F_lya * 4 * np.pi * dL**2
+    L_lya_err = F_lya_err * 4 * np.pi * dL**2
+    print(L_lya)
+    SFR = 9.1e-43*L_lya / 1.64
+    SFR_err = 9.1e-43*L_lya_err / 1.64
     print(SFR, SFR_err)
-    # exit()
-    # print(len(wl_sky), len(wl))
-    v_rot = (((16092 - 16068)/16080)*3e5)/2 * (u.km/u.s)
-    print(v_rot*2)
-    M = v_rot**2 * ((7/2) * 0.21 * 8.46597 * u.kpc)/c.G
-    print("%0.4e" % M.to(u.M_sun).value)
+
 
     # flux[flux_sky > 10000] = np.nan
     pl.plot(wl, flux, label = "Spectrum")
     pl.plot(wl[mask], flux[mask], label = "Integration limits")
-    pl.plot(wl, flux_sky*1e-22, label = "Sky spectrum")
-    pl.errorbar(wl, flux, yerr=error, fmt=".k", capsize=0, elinewidth=0.5, ms=3, label=r"f$_{[OIII]}$ = %0.1e +- %0.1e" % (F_oiii, F_oiii_err))
-    pl.xlim(16000, 16150)
+
+    pl.errorbar(wl, flux, yerr=error, fmt=".k", capsize=0, elinewidth=0.5, ms=3, label=r"f$_{[L\alpha]}$ = %0.1e +- %0.1e" % (F_lya, F_lya_err))
+    pl.errorbar(1, 1, yerr=1, fmt=".k", capsize=0, elinewidth=0.5, ms=3, label="SFR = " +str(np.around(SFR, 0)) + " +-" + str(np.around(SFR_err, 0)))
+    pl.xlim(3850, 3960)
     pl.ylim(-0.5e-17, 1e-17)
-    # pl.show()
+
 
     # Save figure for tex
     pl.legend()
-    pl.savefig("../figures/oiii_flux.pdf", dpi="figure")
-    # pl.show()
+    pl.savefig("../figures/lya_flux.pdf", dpi="figure")
+    pl.show()
 
 if __name__ == '__main__':
     main()

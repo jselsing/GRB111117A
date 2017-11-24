@@ -1,30 +1,12 @@
-03/08/2017
 
-Mr Jonatan Selsing
+We thank the referee for a very professional and constructive report. We have
+done our best to take the suggestions into consideration and the message of the
+paper has been strengthened as a consequence.
 
-jselsing@dark-cosmology.dk
+Kindest regards
 
-Our Ref. : AA/2017/31475
+Jonatan Selsing
 
-Dear Mr. Selsing,
-
-Your manuscript was submitted to a referee who recommends publication, but only
-after major revision (report appended below).
-
-Please take all the comments into account when revising the manuscript, and
-upload the new version (in referee and printer formats) in a timely manner.
-
-Instructions for resubmission can be found at
-https://mms-aanda.obspm.fr/is/aa/resubmit_a_paper.php author ID: 26484
-
-- In your cover letter, please indicate precisely all the changes made in the
-revised version. Please also include your detailed responses keyed to the items
-in the report. - Mark all the changes clearly (e.g., using boldface) in the
-manuscript.
-
-I look forward to receiving the revised version.
-
-best wishes, Dr. Rubina Kotak A&A Editor
 
 
 ------------------- Referee Report
@@ -55,7 +37,7 @@ for why the authors think this redshift is correct:
 -The authors should show the 2D images (as they have done for [OIII]) for all
 lines that they identify.
 
-We agree and we have added a panel showing all the detected lines, which
+JS: We agree and we have added a panel showing all the detected lines, which
 highlights the certainty of the spectroscopic redshift.
 
 -While it is good to show the unbinned spectrum, I suggest either binning the 1D
@@ -64,7 +46,7 @@ or providing plots that zoom in at the locations of the lines. I suggest
 adjusting the plot such that the reader can see the actual data (as currently
 one can only see the model due to the thickness of the line).
 
-While we agree that it would be nice if the presence of the lines could be shown
+JS: While we agree that it would be nice if the presence of the lines could be shown
 in the 1D spectrum, the lines are too narrow and the S/N of the spectrum too low
 for the individual lines to stand out clearly in the full 1D-spectrum,
 independently of the binning chosen. We believe that the newly added panel of
@@ -74,20 +56,20 @@ valuable information.
 
 -What is the uncertainty in the redshift?
 
-An attempt to attach an uncertainty to the redshift has been added, based on
+JS: An attempt to attach an uncertainty to the redshift has been added, based on
 individual redshift measurement using each of the detected lines.
 
 -The 1D error spectrum should be plotted and the positions of the emission lines
 in the 1D spectrum should be labeled.
 
-We agree and this has been included in the spectrum.
+JS: We agree and this has been included in the spectrum.
 
 2) Deduction of star formation rates:
 
 -When calculating the SFR from H-alpha, it is not clear why this is a lower
 limit if the authors have corrected H-alpha for the missing flux.
 
-We have clarified this, which was stated incorrectly in the text. When the
+JS: We have clarified this, which was stated incorrectly in the text. When the
 deriving the SFR, we did in fact not correct for the missing flux of H-alpha,
 but only used the region free from contamination. This also explains why the
 inferred SFR is a limit.
@@ -95,7 +77,7 @@ inferred SFR is a limit.
 -For both H-alpha and OIII, the fits to the line profiles (after
 masking/correcting for the sky lines) should be shown.
 
-Because the profiles are not gaussian or particularly well behaved and given the
+JS: Because the profiles are not gaussian or particularly well behaved and given the
 low S/N of the spectrum, we have not fitted any of the lines. This is now stated
 explicitly in the text. Additionally, OIII was never used to infer the SFR and
 this has been cleared up in the text.
@@ -107,7 +89,7 @@ authors should state what ionization parameter they are assuming, and also
 reference any caveats in using OIII as a SFR indicator. The authors should also
 make clear how the uncertainty in the OIII SFR was derived.
 
-In the original version of the text, we were referring the h-alpha, although the
+JS: In the original version of the text, we were referring the h-alpha, although the
 text was ambiguous. We have now decided to stick to only the lower limit,
 because it was unclear how the systematics of the procedure affected the
 uncertainty in the reported error.
@@ -115,7 +97,7 @@ uncertainty in the reported error.
 -Finally, even though weakly detected, it would be interesting to know if the
 derived SFR from H-beta is consistent with the results from H-alpha and OIII.
 
-While certainly interesting, this was also attempted to constrain the reddening
+JS: While certainly interesting, this was also attempted to constrain the reddening
 through the use of the Balmer decrement, but unfortunately the large uncertainty
 on the H-beta flux prevents obtaining useful information.
 
@@ -128,7 +110,7 @@ and star formation rate), should be included. Was a metallicity assumed, and if
 so, what metallicity and why? Finally, how do these inferred properties compare
 to previous works?
 
-The SED fit is a template fit, and not a parametric fit. Hence, the number of
+JS: The SED fit is a template fit, and not a parametric fit. Hence, the number of
 "degrees of freedom" is ill-defined, and the reduced chi^2 test does not apply
 (e.g. see Andrae et al. 2010 - https://arxiv.org/abs/1012.3754). We have updated
 and expanded the text to clarify the procedure. We refer to previous work,
@@ -144,7 +126,7 @@ different groups. It is interesting and worrisome that the two previous works
 on observations from entirely different facilities (Margutti+ with Gemini, 23.04
 +/- 0.18 mag vs. GMG, z=22.9 +/- 0.3 mag).
 
-Indeed the photometric redshift provided by the two previous papers relies on
+JS: Indeed the photometric redshift provided by the two previous papers relies on
 the identification of the 4000 AA break constrained by the overestimated z-band
 flux. We did worry about the consistency of the two previous measurements, both
 inconsistent with ours. We do not have access to the GMG data, but we did
@@ -171,7 +153,7 @@ z-band photometry but for all of the photometry listed. In fact, if the Gemini
 z-band was quoted properly as a 3- or 5-sigma upper limit, would it still be
 consistent with the VLT/FORS2 measurement by the authors?
 
-We agree that the methodology was not adequately explained in the paper and we
+JS: We agree that the methodology was not adequately explained in the paper and we
 have expanded the text regarding the photometric methodology, especially
 commenting on the discrepancy between the z-band measurements. For the Gemini
 image, we find a limiting 3(5)-sigma upper limit of z > 24.06(23.50) which is
@@ -200,7 +182,7 @@ the aperture used or calibration system (SDSS vs. another system, used between
 the current work and two previous works that could help explain the
 systematically fainter fluxes?
 
-First, please note that values presented in the table are not corrected for the
+JS: First, please note that values presented in the table are not corrected for the
 expected Galactic foreground, contrary to previous works (this amounts to 0.12 /
 0.07 / 0.05 in the g/r/i bands). According to what stated in the previous
 papers, photometry was calibrated in all cases against SDSS and 2MASS for griz
@@ -228,7 +210,7 @@ above, though, we have added further explanations on our photometric methodology
 interesting aspect of this host. However, the lack of reddening seems more like
 an assumption than proven by the data. I have a few questions for clarification:
 
-First we remark that the NH is derived from the X-ray spectrum of the afterglow
+JS: First we remark that the NH is derived from the X-ray spectrum of the afterglow
 and is therefore a sight-line-measurement, where the AV and Lya are integrated
 measures. This is particularly relevant given the sizeable offset between the
 GRB location and the host center. Therefore there does not need to be a direct
@@ -240,7 +222,7 @@ the expanded description of the SED fitting.
 NH with redshift nicely. There are relations between NH and AV - what is the
 derived value for AV and is it consistent with no reddening?
 
-While certainly interesting, the proposed comparison is not straightforward.
+JS: While certainly interesting, the proposed comparison is not straightforward.
 Several studies have compared the afterglow-derived extinction with the
 afterglow-derived hydrogen equivalent column density. Comparison between the
 integrated (luminosity weigthed) host extinction and hydrogen column from X-rays
@@ -255,7 +237,7 @@ section discussing this, but we believe this point can be left future works.
 
 -How does the inferred NH compare to previous works from Sakamoto and Margutti?
 
-Because of the higher redshift used, the intrinsic NH derived for our work
+JS: Because of the higher redshift used, the intrinsic NH derived for our work
 is correspondingly higher. We do not feel it is necessary to state this directly in the text.
 
 -A galaxy can still have detectable Ly-alpha in the presence of dust as it
@@ -263,7 +245,7 @@ depends on the escape fraction. Are the authors able to make any quantitative
 statments on the Lyman-alpha escape fraction, and place a limit on the dust
 column?
 
-We have added a section describing the contraints on the Lya escape
+JS: We have added a section describing the contraints on the Lya escape
 fraction and the implications for the dust column. Note, we do not explicitely
 calculate a dust column based on the escape fraction, because the dust in the
 host is constrained by the photometry.
@@ -272,7 +254,7 @@ host is constrained by the photometry.
 the paper? For instance, if a reddened model is assumed in the SED fit, how
 drastically does this change the stellar population parameters?
 
-Zero reddening is not an assumption, but something that is constrained by the
+JS: Zero reddening is not an assumption, but something that is constrained by the
 photometry. It is a fit parameter in the SED-fit. We have added caveats to the
 SED-fit section. 
 
@@ -288,14 +270,14 @@ state that the burst is consistent with zero lag, the authors should state basic
 information about the burst, such as duration, hardness, limit on extended
 emission, etc to make the case that this event was in fact a short hard GRB.
 
-We can appreciate this point, and have added the basic high-energy properties of
+JS: We can appreciate this point, and have added the basic high-energy properties of
 the burst, calculated by previous authors, which clearly marks it as a sGRB. 
 
 -The mention of the intermediate class of bursts is interesting, but what is GRB
 111117A with respect to this class? Are the host properties of 060121 and 090426
 different than those of more definite short GRBs?
 
-Also according to the classification of Horvath et al. 2010, GRB111117A is a
+JS: Also according to the classification of Horvath et al. 2010, GRB111117A is a
 short GRB. This is now stated exclicitely in the text. 
 
 7) Implications for delay time distribution: The high redshift of GRB 111117A
@@ -312,7 +294,7 @@ elliptical host galaxies where the majority are L* or brighter? If the authors
 only include emission line hosts, that actually neglects ~30% of the short GRB
 population which come from elliptical galaxies.
 
-The D'Avanzo+ 2014 sample is chosen because it is flux-limited, but otherwise
+JS: The D'Avanzo+ 2014 sample is chosen because it is flux-limited, but otherwise
 complete, meaning only unbiasing selection criteria has been imposed on it. It
 should therefore correctly reflect the full, underlying sGRB population down to
 some sGRB brightness level. The Berger 2014 sample is not complete, which is why
@@ -327,7 +309,7 @@ many short GRB redshifts because they originate at z~2, why are we routinely
 able to detect long GRB hosts to high redshifts, even when they have lower
 luminosities?
 
-This is because the large majority of lGRB redshifts (~70 %) come from GRB
+JS: This is because the large majority of lGRB redshifts (~70 %) come from GRB
 afterglow spectroscopy. Only a single sGRB redshift has been found from
 afterglow spectroscopy (GRB 130603B). We have added a small section to highlight
 the difference in redshift determinations of the two classes of bursts. 
@@ -342,7 +324,7 @@ GRB rate out to z~1 (which should be fairly spectroscopically complete)? Are
 there enough Swift short GRBs without redshift measurements that is consistent
 with an explanation that the majority of events actually occur at z~2?
 
-This is a very interesting question and definitely something that merits some
+JS: This is a very interesting question and definitely something that merits some
 consideration. We have added a section to address this. 
 
 
@@ -354,48 +336,60 @@ all of those detected by Swift, or all based on the sample of short GRBs with
 known hosts? I think it is the latter, but I would definitely clarify in the
 abstract and when you get to this section in the text.
 
-We have added that this is for the Swift-detected bursts, both in the abstract and in the text. 
+JS: We have added that this is for the Swift-detected bursts, both in the abstract and in the text. 
 
 Section 1: 
 
 --1st sentence: Define sGRB, NS. 
-Done.
+JS: Done.
+
 --For detection of kilonovae, also cite Berger+ 2013. 
-Definitely.
+JS: Definitely.
+
 --"duration T_90 < 2" - make sure to qualify with 2 sec
-Done. 
+JS: Done. 
+
 --Here and throughout, there is a tendency to use sGRB/short GRB and lGRB/long
 GRB. I suggest using one or the other throughout the text. 
-We have streamline this a bit, but have kept the wording "long and short GRBs"
+JS: We have streamline this a bit, but have kept the wording "long and short GRBs"
+
 --"The bulk of these localizations have associated galaxies at relatively low redshifts... it is
 arguably biased towards lower redshifts" -- This is not necessarily true, as the
 low redshifts could be a natural consequence of relatively long delay times.
-We have cautioned the wording. 
+JS: We have cautioned the wording. 
+
 --"is tracing with host stellar mass rather than star-formation rate" --
 Previous analysis of host galaxy properties have actually found that the short
 GRB rate likely traces both stellar mass and star formation (see Berger 2014 and
 references therein) 
-We have changed the wording to reflect this. 
+JS: We have changed the wording to reflect this. 
+
 --"will provide new a promising ways" -- delete "a"
-Done
+JS: Done
+
 Section 2: --The authors mention there were 4 separate epochs of spectroscopy -
 is any spectral evolution apparent? This would at least be consistent with the
 assumption that there is negligible afterglow contribution from epoch 1. 
-We do not see any spectral evolution. This is now explicitly stated in the text.
+JS: We do not see any spectral evolution. This is now explicitly stated in the text.
+
 --Since the spectra were taken across different nights and under different seeing
 conditions, details of flux calibration for the combined spectrum should be
 included. 
-We have added a description of this.
+JS: We have added a description of this.
+
 --Is it surprising that [OIII] 4959 is not detected, given such a
 strong detection of [OIII] 5007? 
-[OIII] 4959 is detected, but very close to a sky-line. This has now been added to the text. 
+JS: [OIII] 4959 is detected, but very close to a sky-line. This has now been added to the text. 
+
 --"...because the slit is not aligned along the
 long axis of the host, this value is an upper limit" - I believe this should be
 a lower limit 
-Correct! This has been changed and expanded.
+JS: Correct! This has been changed and expanded.
+
 --In calculating beta_OX, state the actual limits that were used
 and in what band. Are these the deepest limits available? 
-To our knowledge, these are the deepest limits available, yes. The limits have now been explicitly stated. 
+JS: To our knowledge, these are the deepest limits available, yes. The limits have now been explicitly stated. 
+
 --"Both of these
 authors report z-band photometry that is brighter by 0.8 mag to 1.0 mag compared
 to our value" -- Are the authors comparing their Gemini z-band to z-band
@@ -403,33 +397,52 @@ measurements in the other papers? Or the VLT measurement to the measurements in
 other papers? If the former, the previous values are actually brighter by
 1.2-1.4 mag; if the latter, the values are discrepant by 0.7 to 0.9 mag. I could
 not figure out the quoted values of 0.8 to 1.0 mag.
-We have changed this to ~ 1 mag. Both our z-band measurements are fainter than the z-band magnitudes reported by other authors.
+JS: We have changed this to ~ 1 mag. Both our z-band measurements are fainter than the z-band magnitudes reported by other authors.
+
 Fig. 3: best-fist --> best-fit
-Done
+JS: Done
+
 Section 3: --"The sub-samples comrprise of 333 long, 19 short..." - the papers
 where the data came from should be cited. 
 These references were in the caption, but have now been repeated in the text. 
---"had a luminosity of 44.95" -->
-should appear as a power of 10 and with units 
-This has been updated.
+--"had a luminosity of 44.95" --> should appear as a power of 10 and with units 
+JS: This has been updated.
 
---"GRB 111117A has a 96%
-probability of being a sGRB" - The terms sGRB and non-collapsar seem to be used
-interchangeably here. From the burst properties it certainly seems like a sGRB.
-To be more accurate I would say "non-collapsar" --"... it occurred when the
-universe was younger by 1.8 Gyr compared to any other non-collapsar GRB ever
-detected" -- again, how do you find non-collapsar? There is no way to know for
-certain and the Bromberg+ 2013 method has been proven unreliable from host
-galaxy properties. If you do want to rely on Bromberg+ 2013, what percent
-probability do you consider as a "non-collapsar GRB"? -"This number is 3.2 Gyr
-for the next-highest spectroscopic redshift" - This sentence needs a citation
-and would be helpful to state what burst this is -Even though the offset does
-not change much, it is worth recalculating in this paper for completeness.
--"Along with the absence of dust" -- This is not yet proven in this paper. I
-suggest revising to "If the assumption of no dust is correct..." -The scenario
-in which the density of material is high to explain the high NH would imply a
-bright afterglow, although would appear faint at z=2.211. Are the afterglow
-limits still consistent with a high-density environment at z=2.211?
+--"GRB 111117A has a 96% probability of being a sGRB" 
+JS: Done
+
+-- The terms sGRB and non-collapsar seem to be used interchangeably here. From the burst properties it certainly
+seems like a sGRB. To be more accurate I would say "non-collapsar"
+JS: We have removed the usage of non-collapsar and stuck with sGRB.
+
+--"... it occurred when the universe was younger by 1.8 Gyr compared to any
+other non-collapsar GRB ever detected"
+JS: Done
+
+-- again, how do you find non-collapsar? There is no way to know for certain and
+the Bromberg+ 2013 method has been proven unreliable from host galaxy
+properties. If you do want to rely on Bromberg+ 2013, what percent probability
+do you consider as a "non-collapsar GRB"?
+JS: We have stated a f_NC > 50 per cent requirement of the Bromberg classification to consider a given burst short.
+
+--"This number is 3.2 Gyr for the next-highest spectroscopic redshift" - This
+sentence needs a citation and would be helpful to state what burst this is
+JS: We have expanded this entire section a bit to be more complete.
+
+--Even though the offset does not change much, it is worth recalculating in this
+paper for completeness.
+JS: Done
+
+--"Along with the absence of dust" -- This is not yet proven in this paper. I
+suggest revising to "If the assumption of no dust is correct..."
+JS: This has been changed to "low dust content"
+
+--The scenario in which the density of material is high to explain the high NH
+would imply a bright afterglow, although would appear faint at z=2.211. Are the
+afterglow limits still consistent with a high-density environment at z=2.211?
+The X-ray afterglow is not strongly dependent of the density and because of the optical
+darkness, dust extinction locally to the GRB can accomodate a large brightness
+interval. We have mentioned this in text. 
 
 Fig. 4: A comparison of the light curve for GRB 111117A to the identical figure
 in Margutti+ (their Fig 6) looks like the luminosity does not change, even
@@ -439,20 +452,46 @@ curve in Fig. 4 does not. Is the luminosity calculated correctly, or are they in
 different energy bands? -Does this include the Chandra data as well? If so, it
 would be good to include that in the caption.
 
-Fig. 5: What are the lines and what is the red curve that appear on the top and
-side of the plot?
 
-Section 5: -"this places a hard upper limit on the initial separation..." - Is
-there a citation for the equation used to calculate this? -This may be outside
-the scope of this work, but how does the initial separation change under
-different mass assumptions (unequal mass binary, or more/less massive binary)?
--The authors should note that this discussion assumes that GRB 111117A did not
-form dynamically in a globular cluster as suggested by some works (e.g., Lee+
-2010; Church+ 2011)
+Margutti didn't use the light curve from the Swift Burst Analyser. Her early light curve is ~0.18 dex brighter.
+The shape is also a bit different. k-correction: Margutti fixed the photon index
+to 2.2. The Burst Analyser provides estimates of the photon index for each
+observation. At the time of the first observation, the Burst Analyser gives a
+photon index of 0.93. The k-correction for a power-law shaped spectrum is:
+(1+z)^(Gamma-2). The difference in these parameters corresponds to a difference
+in the k-correction of 0.63 dex. The different distances gives a luminosity
+difference of 0.58 dex (differences in the cosmology are taken into account).
+
+All in all, logL(us) - logL(Margutti) = (0.58 - 0.18 - 0.63) dex = -0.23 dex.
+
+Comparing her plot with ours gives difference of ~-0.2 dex, which is identical to the expected difference.
+
+
+Fig. 5: What are the lines and what is the red curve that appear on the top and
+side of the plot? 
+JS: The caption has been expanded to better explain the different
+components. 
+
+Section 5: -"this places a hard upper limit on the initial
+separation..." - Is there a citation for the equation used to calculate this?
+JS: The equation is in the Postnov reference. The actual calculation is included in
+the online repository, with reference to the exact equation. 
+
+-This may be outside the scope of this work, but how does
+the initial separation change under different mass assumptions (unequal mass
+binary, or more/less massive binary)? 
+JS: We have included the calculation for different mass assumptions and changed the text accordingly. 
+
+-The authors should note that this
+discussion assumes that GRB 111117A did not form dynamically in a globular
+cluster as suggested by some works (e.g., Lee+ 2010; Church+ 2011)
+JS: We do not assume anything about the formation channel, only that the neutron
+star binary was already in place at the beginning of the universe. We have for
+completeness mentioned the possible dynamical origin of neutron star binaries. 
 
 Section 6: -"The high NH is difficult to reconcile with the large projected host
 offset" - How large is the offset at z=2.211? -"for between 43 and 71 percent of
 sGRB hosts" -- should be revised to "sGRBs with known or well-characterized
 hosts"
-
+JS: We have changed the wording.
 -------------------

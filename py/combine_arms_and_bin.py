@@ -181,14 +181,16 @@ def main():
     VIS_mask = (VIS_wl > 5700) & (VIS_wl < 9600)
     NIR_mask = (NIR_wl > 10500) & (NIR_wl < 20500) #& (NIR_flux > -1e-19)
     waves = [UVB_wl[UVB_mask], VIS_wl[VIS_mask], NIR_wl[NIR_mask]]
-    flux = [UVB_flux[UVB_mask], VIS_flux[VIS_mask], NIR_flux[NIR_mask]]
-    error = [UVB_error[UVB_mask], VIS_error[VIS_mask], NIR_error[NIR_mask]]
+    flux = [UVB_flux[UVB_mask]*1.3, VIS_flux[VIS_mask]*1.1, NIR_flux[NIR_mask]*1.1] # Slitloss correction based on seeing
+    error = [UVB_error[UVB_mask]*1.3, VIS_error[VIS_mask]*1.1, NIR_error[NIR_mask]] # Slitloss correction based on seeing
     bpmap = [UVB_bp[UVB_mask], VIS_bp[VIS_mask], NIR_bp[NIR_mask]]
 
     # Stitch!
     wl, flux, error, bpmap = stitch_XSH_spectra(waves, flux, error, bpmap, scale = scale)
 
-    np.savetxt(data_dir + "stitched_spectrum.dat", zip(wl, flux, error, bpmap), fmt = ['%10.6e', '%10.6e', '%10.6e', '%10.6f'], header=" wl flux error bpmap")
+
+
+    np.savetxt(data_dir + "stitched_spectrum.dat",list(zip(wl, flux, error, bpmap)), fmt = ['%10.6e', '%10.6e', '%10.6e', '%10.6f'], header=" wl flux error bpmap")
 
     hbin = 5
     wl_bin, flux_bin, error_bin, bp_bin = bin_spectrum(wl, flux, error, bpmap.astype("bool"), hbin, weight=True)
@@ -203,24 +205,24 @@ def main():
     # exit()
 
 
-    np.savetxt(data_dir + "stitched_spectrum_bin"+str(hbin)+".dat", zip(wl_bin, flux_bin, error_bin, bp_bin), fmt = ['%10.6e', '%10.6e', '%10.6e', '%10.6f'], header=" wl flux error bpmap")
+    np.savetxt(data_dir + "stitched_spectrum_bin"+str(hbin)+".dat", list(zip(wl_bin, flux_bin, error_bin, bp_bin)), fmt = ['%10.6e', '%10.6e', '%10.6e', '%10.6f'], header=" wl flux error bpmap")
     pl.errorbar(wl_bin[::1], f_nu[::1], yerr=f_nu_err[::1], fmt=".k", capsize=0, elinewidth=0.5, ms=3, alpha=0.3)
     pl.plot(wl_bin, medfilt(f_nu, 1), linestyle="steps-mid", lw=0.5, alpha=0.7)
     # pl.plot(wl_bin, f_nu_err, linestyle="steps-mid", lw=1.0, alpha=0.5, color = "grey")
     pl.axhline(0, linestyle="dashed", color = "black", lw = 0.4)
 
 
-    # scale = np.median(f_nu[~np.isnan(f_nu)])
-    pl.xlim(3200, 24000)
-    # pl.ylim(-1 * scale, 10 * scale)
-    pl.xlabel(r"Wavelength / [$\mathrm{\AA}$]")
-    pl.ylabel(r'F$_\nu$ [$\mu$Jy]')
-    ax = pl.gca()
-    ax.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
-    ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f'))
-    pl.loglog()
-    pl.savefig("../figures/stitched_spectrum_bin"+str(hbin)+".pdf")
-    pl.show()
+    # # scale = np.median(f_nu[~np.isnan(f_nu)])
+    # pl.xlim(3200, 24000)
+    # # pl.ylim(-1 * scale, 10 * scale)
+    # pl.xlabel(r"Wavelength / [$\mathrm{\AA}$]")
+    # pl.ylabel(r'F$_\nu$ [$\mu$Jy]')
+    # ax = pl.gca()
+    # ax.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
+    # ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f'))
+    # pl.loglog()
+    # pl.savefig("../figures/stitched_spectrum_bin"+str(hbin)+".pdf")
+    # pl.show()
 
 
 if __name__ == '__main__':

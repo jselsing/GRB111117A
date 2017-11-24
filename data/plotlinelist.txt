@@ -1,0 +1,14 @@
+#Emission lines
+$\mathrm{Ly\alpha}$    1215.67
+$\mathrm{[OII]}$       3727.09
+$\mathrm{[OII]}$       3729.88
+$\mathrm{[OIII]}$      4364.44
+$\mathrm{H\beta}$      4862.68
+$\mathrm{[OIII]}$      4960.30
+$\mathrm{[OIII]}$      5008.24
+$\mathrm{H\alpha}$     6564.61
+
+
+
+
+
