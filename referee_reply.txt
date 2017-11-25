@@ -351,7 +351,7 @@ JS: Done.
 
 --Here and throughout, there is a tendency to use sGRB/short GRB and lGRB/long
 GRB. I suggest using one or the other throughout the text. 
-JS: We have streamline this a bit, but have kept the wording "long and short GRBs"
+JS: We have streamlined this a bit, but have kept the wording "long and short GRBs"
 
 --"The bulk of these localizations have associated galaxies at relatively low redshifts... it is
 arguably biased towards lower redshifts" -- This is not necessarily true, as the
@@ -440,7 +440,7 @@ JS: This has been changed to "low dust content"
 --The scenario in which the density of material is high to explain the high NH
 would imply a bright afterglow, although would appear faint at z=2.211. Are the
 afterglow limits still consistent with a high-density environment at z=2.211?
-The X-ray afterglow is not strongly dependent of the density and because of the optical
+JS: The X-ray afterglow is not strongly dependent of the density and because of the optical
 darkness, dust extinction locally to the GRB can accomodate a large brightness
 interval. We have mentioned this in text. 
 
@@ -453,18 +453,20 @@ different energy bands? -Does this include the Chandra data as well? If so, it
 would be good to include that in the caption.
 
 
-Margutti didn't use the light curve from the Swift Burst Analyser. Her early light curve is ~0.18 dex brighter.
-The shape is also a bit different. k-correction: Margutti fixed the photon index
-to 2.2. The Burst Analyser provides estimates of the photon index for each
-observation. At the time of the first observation, the Burst Analyser gives a
-photon index of 0.93. The k-correction for a power-law shaped spectrum is:
-(1+z)^(Gamma-2). The difference in these parameters corresponds to a difference
-in the k-correction of 0.63 dex. The different distances gives a luminosity
-difference of 0.58 dex (differences in the cosmology are taken into account).
+Margutti+ didn't use the light curve from the Swift Burst Analyser. Her early light
+curve is ~0.18 dex brighter. The shape is also a bit different. k-correction:
+Margutti+ fixed the photon index to 2.2. The Burst Analyser provides estimates of
+the photon index for each observation. At the time of the first observation, the
+Burst Analyser gives a photon index of 0.93. The k-correction for a power-law
+shaped spectrum is: (1+z)^(Gamma-2). The difference in these parameters
+corresponds to a difference in the k-correction of 0.63 dex. The different
+distances gives a luminosity difference of 0.58 dex (differences in the
+cosmology are taken into account).
 
 All in all, logL(us) - logL(Margutti) = (0.58 - 0.18 - 0.63) dex = -0.23 dex.
 
-Comparing her plot with ours gives difference of ~-0.2 dex, which is identical to the expected difference.
+Comparing her plot with ours gives difference of ~-0.2 dex, which is identical
+to the expected difference.
 
 
 Fig. 5: What are the lines and what is the red curve that appear on the top and

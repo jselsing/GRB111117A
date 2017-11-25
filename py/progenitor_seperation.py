@@ -68,7 +68,7 @@ def main():
     fig, ax = pl.subplots()
     im = ax.imshow(a0, extent=[min(masses), max(masses), min(masses), max(masses)], cmap="viridis_r")
     cbar = pl.colorbar(im)
-    cbar.set_label(r'a$_0$ [R$_\odot$]')
+    cbar.set_label(r'$a_0$ [$R_\odot$]')
 
 
     from matplotlib.patches import Ellipse
@@ -78,8 +78,8 @@ def main():
 
 
 
-    ax.set_xlabel(r"M$_{\mathrm{NS}}$ [M$_\odot$]")
-    ax.set_ylabel(r"M$_{\mathrm{NS}}$ [M$_\odot$]")
+    ax.set_xlabel(r"$M_{\mathrm{NS}}$ [$M_\odot$]")
+    ax.set_ylabel(r"$M_{\mathrm{NS}}$ [$M_\odot$]")
     pl.tight_layout()
     pl.savefig("../figures/prog_sep.pdf")
     pl.show()

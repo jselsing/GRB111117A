@@ -80,8 +80,8 @@ def main():
 
     # ax1 = pl.gca()
     ax1.invert_yaxis()
-    ax1.set_xlabel(r"Wavelength [$\mathrm{\AA}$]")
-    ax1.set_ylabel(r'Brightness [AB$_{mag}$]')
+    ax1.set_xlabel(r"Observed wavelength [$\mathrm{\AA}$]")
+    ax1.set_ylabel(r'Brightness [AB mag]')
     ax1.set_ylim(26.1, 17.5)
 
     # ax2 = ax1.twinx()
@@ -91,7 +91,7 @@ def main():
     print(mn)
     ax2.set_ylim(10**((23.9 - mn)/2.5), 10**((23.9 - mx)/2.5))
     ax2.semilogy()
-    ax2.set_ylabel(r'F$_\nu$ [$\mu$Jy]')
+    ax2.set_ylabel(r'Flux density [$\mu$Jy]')
 
     # pl.ylim(-1 * scale, 10 * scale)
 

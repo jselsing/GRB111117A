@@ -5,6 +5,7 @@ from __future__ import division, print_function
 
 from astropy.io import fits
 import pandas as pd
+import matplotlib; matplotlib.use('TkAgg')
 import matplotlib.pyplot as pl
 import seaborn as sns; sns.set_style('ticks')
 import numpy as np
@@ -104,10 +105,10 @@ def main():
     colors = [sns.set_hls_values(color_rgb, l=l) for l in np.linspace(1, 0, 12)]
     cmap = sns.blend_palette(colors, as_cmap=True)
     g = g.plot_marginals(sns.distplot, hist=False, color=color)
-    g = g.plot_joint(sns.kdeplot, cmap=cmap, label="Arcodia et al. 2016", zorder=1)
+    g = g.plot_joint(sns.kdeplot, cmap=cmap, label="Arcodia et al. 2016", zorder=1, lw=0.7, alpha=0.6)
     # g = g.plot_joint(pl.scatter, cmap=cmap, label="Arcodia et al. 2016", zorder=1)
     # g = g.plot_marginals(sns.distplot, hist=False, rug=True, kde=False, color=color, rug_kws={"height": 0.7, "lw": 2.0})
-    # g = g.plot_joint(pl.scatter, color=color, label="Arcodia et al. 2016")
+    g = g.plot_joint(pl.scatter, color=color, marker="h", s=20, lw=1.0, alpha=0.8)
     print(z_long_uplim, NH_long_uplim)
     g.x = z_long_uplim
     g.y = NH_long_uplim
@@ -122,18 +123,6 @@ def main():
 
 
 
-    color = sns.color_palette()[1]
-    g.x = np.array([2.211])
-    g.y = np.array([np.log10(2.4e22)])
-    # g.y = np.array([np.log10(2.4e22+2.4e22)])
-    gyupperr = np.log10(2.4e22)/np.log10(2.4e22) # np.log10(2.4e22) - np.log10(1.6e22)
-    gylowerr = np.log10(1.6e22)/np.log10(2.4e22) #  np.log10(4.8e22) - np.log10(2.4e22)
-    g = g.plot_joint(pl.scatter, marker = "*", s = 150, color=sns.color_palette()[1], label="GRB111117A")
-
-    g = g.plot_marginals(sns.rugplot, color=color, height = 1.0, lw = 4.0)
-    g.x = np.array([2.211, 2.211])
-    g.y = np.array([np.log10(2.4e22 - 1.6e22), np.log10(2.4e22 + 2.4e22)])
-    g = g.plot_joint(pl.plot, color=sns.color_palette()[1])
 
     # Plot values D'Avanzo et al. 2014
     color = sns.color_palette()[0]
@@ -150,12 +139,28 @@ def main():
     g.y = 1
     g = g.plot_joint(pl.plot, color=sns.color_palette()[2], label="Arcodia et al. 2016")
 
+
+    color = sns.color_palette()[1]
+    g.x = np.array([2.211])
+    g.y = np.array([np.log10(2.4e22)])
+    # g.y = np.array([np.log10(2.4e22+2.4e22)])
+    gyupperr = np.log10(2.4e22)/np.log10(2.4e22) # np.log10(2.4e22) - np.log10(1.6e22)
+    gylowerr = np.log10(1.6e22)/np.log10(2.4e22) #  np.log10(4.8e22) - np.log10(2.4e22)
+    g = g.plot_joint(pl.scatter, marker = "*", s = 150, color=sns.color_palette()[1], label="GRB 111117A")
+
+    g = g.plot_marginals(sns.rugplot, color=color, height = 1.0, lw = 4.0)
+    g.x = np.array([2.211, 2.211])
+    g.y = np.array([np.log10(2.4e22 - 1.6e22), np.log10(2.4e22 + 2.4e22)])
+    g = g.plot_joint(pl.plot, color=sns.color_palette()[1])
+
+
     ax = pl.gca()
-    g.set_axis_labels(r"z", r"log($N_\mathrm{H}$) [cm$^{-2}$]")
+    g.set_axis_labels(r"z", r"log($N_\mathrm{H,X}$) [cm$^{-2}$]")
     pl.tight_layout()
 
     # Save figure for tex
-    pl.legend(loc=1)
+    pl.xlim((0,6))
+    pl.legend(loc=1, markerfirst=False)
     pl.savefig("../figures/NH_z.pdf", dpi="figure")
     pl.show()
 
