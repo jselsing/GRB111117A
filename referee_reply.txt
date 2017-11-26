@@ -234,7 +234,6 @@ of a few, but with a large number of outliers. To our knowledge, a corresponding
 study has not been carried out for short GRB environments. We have added a small
 section discussing this, but we believe this point can be left future works. 
 
-
 -How does the inferred NH compare to previous works from Sakamoto and Margutti?
 
 JS: Because of the higher redshift used, the intrinsic NH derived for our work
@@ -341,53 +340,65 @@ JS: We have added that this is for the Swift-detected bursts, both in the abstra
 Section 1: 
 
 --1st sentence: Define sGRB, NS. 
+
 JS: Done.
 
 --For detection of kilonovae, also cite Berger+ 2013. 
-JS: Definitely.
+
+JS: Definitely. This was an oversight.
 
 --"duration T_90 < 2" - make sure to qualify with 2 sec
+
 JS: Done. 
 
 --Here and throughout, there is a tendency to use sGRB/short GRB and lGRB/long
 GRB. I suggest using one or the other throughout the text. 
+
 JS: We have streamlined this a bit, but have kept the wording "long and short GRBs"
 
 --"The bulk of these localizations have associated galaxies at relatively low redshifts... it is
 arguably biased towards lower redshifts" -- This is not necessarily true, as the
 low redshifts could be a natural consequence of relatively long delay times.
+
 JS: We have cautioned the wording. 
 
 --"is tracing with host stellar mass rather than star-formation rate" --
 Previous analysis of host galaxy properties have actually found that the short
 GRB rate likely traces both stellar mass and star formation (see Berger 2014 and
 references therein) 
+
 JS: We have changed the wording to reflect this. 
 
 --"will provide new a promising ways" -- delete "a"
+
 JS: Done
 
 Section 2: --The authors mention there were 4 separate epochs of spectroscopy -
 is any spectral evolution apparent? This would at least be consistent with the
 assumption that there is negligible afterglow contribution from epoch 1. 
+
 JS: We do not see any spectral evolution. This is now explicitly stated in the text.
 
 --Since the spectra were taken across different nights and under different seeing
 conditions, details of flux calibration for the combined spectrum should be
 included. 
+
 JS: We have added a description of this.
 
 --Is it surprising that [OIII] 4959 is not detected, given such a
 strong detection of [OIII] 5007? 
+
 JS: [OIII] 4959 is detected, but very close to a sky-line. This has now been added to the text. 
 
 --"...because the slit is not aligned along the
 long axis of the host, this value is an upper limit" - I believe this should be
 a lower limit 
+
 JS: Correct! This has been changed and expanded.
 
 --In calculating beta_OX, state the actual limits that were used
 and in what band. Are these the deepest limits available? 
+
 JS: To our knowledge, these are the deepest limits available, yes. The limits have now been explicitly stated. 
 
 --"Both of these
@@ -397,49 +408,60 @@ measurements in the other papers? Or the VLT measurement to the measurements in
 other papers? If the former, the previous values are actually brighter by
 1.2-1.4 mag; if the latter, the values are discrepant by 0.7 to 0.9 mag. I could
 not figure out the quoted values of 0.8 to 1.0 mag.
+
 JS: We have changed this to ~ 1 mag. Both our z-band measurements are fainter than the z-band magnitudes reported by other authors.
 
 Fig. 3: best-fist --> best-fit
+
 JS: Done
 
 Section 3: --"The sub-samples comrprise of 333 long, 19 short..." - the papers
 where the data came from should be cited. 
 These references were in the caption, but have now been repeated in the text. 
 --"had a luminosity of 44.95" --> should appear as a power of 10 and with units 
+
 JS: This has been updated.
 
 --"GRB 111117A has a 96% probability of being a sGRB" 
+
 JS: Done
 
 -- The terms sGRB and non-collapsar seem to be used interchangeably here. From the burst properties it certainly
 seems like a sGRB. To be more accurate I would say "non-collapsar"
+
 JS: We have removed the usage of non-collapsar and stuck with sGRB.
 
 --"... it occurred when the universe was younger by 1.8 Gyr compared to any
 other non-collapsar GRB ever detected"
+
 JS: Done
 
 -- again, how do you find non-collapsar? There is no way to know for certain and
 the Bromberg+ 2013 method has been proven unreliable from host galaxy
 properties. If you do want to rely on Bromberg+ 2013, what percent probability
 do you consider as a "non-collapsar GRB"?
+
 JS: We have stated a f_NC > 50 per cent requirement of the Bromberg classification to consider a given burst short.
 
 --"This number is 3.2 Gyr for the next-highest spectroscopic redshift" - This
 sentence needs a citation and would be helpful to state what burst this is
+
 JS: We have expanded this entire section a bit to be more complete.
 
 --Even though the offset does not change much, it is worth recalculating in this
 paper for completeness.
+
 JS: Done
 
 --"Along with the absence of dust" -- This is not yet proven in this paper. I
 suggest revising to "If the assumption of no dust is correct..."
+
 JS: This has been changed to "low dust content"
 
 --The scenario in which the density of material is high to explain the high NH
 would imply a bright afterglow, although would appear faint at z=2.211. Are the
 afterglow limits still consistent with a high-density environment at z=2.211?
+
 JS: The X-ray afterglow is not strongly dependent of the density and because of the optical
 darkness, dust extinction locally to the GRB can accomodate a large brightness
 interval. We have mentioned this in text. 
@@ -452,8 +474,7 @@ curve in Fig. 4 does not. Is the luminosity calculated correctly, or are they in
 different energy bands? -Does this include the Chandra data as well? If so, it
 would be good to include that in the caption.
 
-
-Margutti+ didn't use the light curve from the Swift Burst Analyser. Her early light
+JS: Margutti+ didn't use the light curve from the Swift Burst Analyser. Her early light
 curve is ~0.18 dex brighter. The shape is also a bit different. k-correction:
 Margutti+ fixed the photon index to 2.2. The Burst Analyser provides estimates of
 the photon index for each observation. At the time of the first observation, the
@@ -462,31 +483,32 @@ shaped spectrum is: (1+z)^(Gamma-2). The difference in these parameters
 corresponds to a difference in the k-correction of 0.63 dex. The different
 distances gives a luminosity difference of 0.58 dex (differences in the
 cosmology are taken into account).
-
 All in all, logL(us) - logL(Margutti) = (0.58 - 0.18 - 0.63) dex = -0.23 dex.
-
 Comparing her plot with ours gives difference of ~-0.2 dex, which is identical
 to the expected difference.
 
-
 Fig. 5: What are the lines and what is the red curve that appear on the top and
 side of the plot? 
+
 JS: The caption has been expanded to better explain the different
 components. 
 
 Section 5: -"this places a hard upper limit on the initial
 separation..." - Is there a citation for the equation used to calculate this?
+
 JS: The equation is in the Postnov reference. The actual calculation is included in
 the online repository, with reference to the exact equation. 
 
 -This may be outside the scope of this work, but how does
 the initial separation change under different mass assumptions (unequal mass
 binary, or more/less massive binary)? 
+
 JS: We have included the calculation for different mass assumptions and changed the text accordingly. 
 
 -The authors should note that this
 discussion assumes that GRB 111117A did not form dynamically in a globular
 cluster as suggested by some works (e.g., Lee+ 2010; Church+ 2011)
+
 JS: We do not assume anything about the formation channel, only that the neutron
 star binary was already in place at the beginning of the universe. We have for
 completeness mentioned the possible dynamical origin of neutron star binaries. 
@@ -495,5 +517,6 @@ Section 6: -"The high NH is difficult to reconcile with the large projected host
 offset" - How large is the offset at z=2.211? -"for between 43 and 71 percent of
 sGRB hosts" -- should be revised to "sGRBs with known or well-characterized
 hosts"
+
 JS: We have changed the wording.
 -------------------
