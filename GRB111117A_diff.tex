@@ -1,4 +1,7 @@
 %                                                                 aa.dem
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL GRB111117A_old2.tex   Thu Dec  7 10:01:32 2017
+%DIF ADD GRB111117A.tex        Tue Feb  6 11:21:47 2018
 % AA vers. 8.2, LaTeX class for Astronomy & Astrophysics
 % demonstration file
 %                                                       (c) EDP Sciences
@@ -13,8 +16,8 @@
 % according to the author-year natbib style
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{aa}    %% Astronomy & Astrophysics style class aa.cls v8.2
-%\documentclass[referee]{aa} 
+%\documentclass{aa}    %% Astronomy & Astrophysics style class aa.cls v8.2
+\documentclass[referee]{aa} 
 
 \usepackage{graphicx,url,twoopt,natbib}
 \usepackage[varg]{txfonts}           %% A&A font choice
@@ -40,9 +43,71 @@
 
 \usepackage{xcolor}
 \newcommand\todo[1]{\textbf{(#1)}}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF BOLD PREAMBLE %DIF PREAMBLE
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\bf #1}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
 
 \begin{document}
-	
+
 \title{The host galaxy of the short GRB~111117A at $z = 2.211$: impact on the short GRB redshift distribution and progenitor channels\thanks{Based on observations collected at ESO/VLT under programme 088.A-0051 and 091.D-0904, at TNG under programme A24TAC\_38, at Gemini North under programme GN-2011B-Q-10 and GTC under programme GTC43-11B.}}
 
 \titlerunning{GRB~111117A}
@@ -56,7 +121,43 @@
 \authorrunning{Selsing et al.}
 
 
-\abstract{
+\DIFdelbegin %DIFDELCMD < \abstract{
+%DIFDELCMD < It is notoriously difficult to localize short $\gamma$-ray bursts (sGRBs) and
+%DIFDELCMD < their hosts to measure their redshifts. These measurements, however, are
+%DIFDELCMD < critical to constrain the nature of sGRB progenitors, their redshift
+%DIFDELCMD < distribution and the $r$-process element enrichment history of the universe.
+%DIFDELCMD < Here, we present spectroscopy of the host galaxy of GRB~111117A and measure its
+%DIFDELCMD < redshift to be $z = 2.211$. This makes GRB~111117A the most distant
+%DIFDELCMD < high-confidence short duration GRB detected to date. Our spectroscopic redshift
+%DIFDELCMD < supersedes a lower, previously estimated photometric redshift value for this
+%DIFDELCMD < burst.
+%DIFDELCMD < 
+
+%DIFDELCMD < We use the spectroscopic redshift, as well as new imaging data to constrain the
+%DIFDELCMD < nature of the host galaxy and the physical parameters of the GRB. The rest-frame
+%DIFDELCMD < X-ray derived hydrogen column density, for example, is the highest compared to a
+%DIFDELCMD < complete sample of sGRBs and seems to follow the evolution with redshift as
+%DIFDELCMD < traced by the hosts of long GRBs.
+%DIFDELCMD < 
+
+%DIFDELCMD < The host lies in the brighter end of the expected sGRB host brightness
+%DIFDELCMD < distribution at $z = 2.211$, and is actively forming stars. Using the observed
+%DIFDELCMD < sGRB host luminosity distribution, we find that between 43 and 71 per cent of
+%DIFDELCMD < all \textit{Swift}-detected sGRBs have too faint hosts at $z\sim2$ to allow for
+%DIFDELCMD < a secure redshift determination. This implies that the measured sGRB redshift
+%DIFDELCMD < distribution could be incomplete at high redshift. The large $z$ of
+%DIFDELCMD < GRB~111117A is evidence against a lognormal delay-time model for sGRBs through
+%DIFDELCMD < the predicted redshift distribution of sGRBs, which is very sensitive to
+%DIFDELCMD < high-$z$ sGRBs.
+%DIFDELCMD < 
+
+%DIFDELCMD < From the age of the universe at the time of GRB explosion, an initial neutron
+%DIFDELCMD < star (NS) separation of $a_0 < 3.1~R_\odot$ is required in the case where the
+%DIFDELCMD < progenitor system is a circular pair of inspiralling NSs. This constraint
+%DIFDELCMD < excludes some of the longest sGRB formation channels for this burst.
+%DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \abstract{
 It is notoriously difficult to localize short $\gamma$-ray bursts (sGRBs) and
 their hosts to measure their redshifts. These measurements, however, are
 critical to constrain the nature of sGRB progenitors, their redshift
@@ -72,7 +173,8 @@ nature of the host galaxy and the physical parameters of the GRB. The rest-frame
 X-ray derived hydrogen column density, for example, is the highest compared to a
 complete sample of sGRBs and seems to follow the evolution with redshift as
 traced by the hosts of long GRBs. From the detection of \lya~emission in the
-spectrum, we are able to constrain the escape fraction of \lya~in the host.
+spectrum, we are able to put contraints on the escape fraction of \lya~in the sGRB
+host.
 
 The host lies in the brighter end of the expected sGRB host brightness
 distribution at $z = 2.211$, and is actively forming stars. Using the observed
@@ -89,6 +191,7 @@ star (NS) separation of $a_0 < 3.1~R_\odot$ is required in the case where the
 progenitor system is a circular pair of inspiralling NSs. This constraint
 excludes some of the longest sGRB formation channels for this burst.
 }
+\DIFaddend 
 
 \keywords{gamma-ray burst: individual: GRB~111117A -- gamma-ray burst: general -- galaxies: high-redshift -- binaries: general -- X-rays: bursts -- techniques: imaging spectroscopy}
 
@@ -103,9 +206,9 @@ due to their apparent association with kilonovae \citep{Barnes2013a,
 	Tanvir2013b, Berger2013b, Yang2015, Jin2016, Rosswog2016}. This association was
 recently confirmed by the simultaneous and co-spatial detection of gravitational
 waves (GWs) from a binary neutron star merger and a sGRB
-\citep{LIGOScientificCollaboration2017a, Goldstein2017, Savchenko2017}, however,
+\citep{LIGOScientificCollaboration2017a, Goldstein2017, Savchenko2017}\DIFaddbegin \DIFadd{, however,
 to what degree the sGRB associated with GW170817 is a cosmological sGRB remains
-an open question \citep{Lyman2018, Margutti2018}. The absence of associated
+an open question \citep{Lyman2018, Margutti2018}}\DIFaddend . The absence of associated
 supernovae in deep searches \citep[e.g.][]{Hjorth2005a,Fox2005,Hjorth2005b,
 	Kann2011} supports this idea and distinguishes the physical origin of sGRBs from
 their long-duration counterparts, \citep[albeit see also][]{Fynbo2006b,
@@ -164,7 +267,7 @@ coalescence time scales.
 
 We here present a spectrum of the host galaxy of the short GRB~111117A
 ($T_{90}=0.46$~s) and measure its redshift to be $z=2.211$. This value is
-significantly higher than the previously estimated redshift of $z \sim 1.3$ based on photometric
+significantly higher than the previously estimated redshift \DIFaddbegin \DIFadd{of $z \sim 1.3$ }\DIFaddend based on photometric
 studies \citep{Margutti2012,Sakamoto2013}. We present the GRB's rest frame
 properties based on this new distance compared to previous analyses and revisit
 the host properties derived from the new solution to the spectral energy
@@ -191,7 +294,7 @@ are given in the AB system.
 	FORS2 $R$-band imaging of the field of GRB~111117A with the X-shooter slit
 overlaid. The slit position represents 4 epochs of spectroscopic observations
 taken at similar position angles. The corresponding photometry is shown in
-Fig.~\ref{fig:SED}. The blue asterisk indicates the GRB position (R.A., Dec.) (J2000) = (00$^{\rm h}$ 50$^{\rm m}$ 46.264$^{\rm s}$, +23$^{\circ}$ 00$^{\prime}$ 39.98$^{\prime\prime}$) as derived
+Fig.~\ref{fig:SED}. The blue asterisk indicates the GRB position as derived
 from the \emph{Chandra} observations in \citet{Sakamoto2013}.
 	}
 	\label{fig:spec_setup}
@@ -509,8 +612,9 @@ This securely makes GRB~111117A, by far, the highest redshift sGRB detected to
 date. The redshift and classification of GRB~111117A imply that it occurred when
 the universe was younger by $\sim$ 3 Gyr compared to any other securely
 classified sGRB ever detected. If the merger of NSs is the primary agent for the
-$r$-process element enrichment of the universe \citep{Goriely2011, Ji2016,
-	Komiya2016, Safarzadeh2017}, this marks the earliest detection of this process.
+$r$-process element enrichment of the universe \DIFdelbegin \DIFdel{\citep{Goriely2011, Ji2016,
+	Komiya2016}}\DIFdelend \DIFaddbegin \DIFadd{\citep{Goriely2011, Ji2016,
+	Komiya2016, Safarzadeh2017}}\DIFaddend , this marks the earliest detection of this process.
 
 \begin{figure}
 	\centering
@@ -746,7 +850,7 @@ found that the mean detection probability for sGRBs at $z \sim2$ was only
 $\sim1$ per cent of the mean detection probability at $z \sim1$, assuming that
 the unknown beaming angle of sGRBs stays constant with time. What this means is
 that at the present, there is almost no limit on the number of sGRBs that could
-be at redshifts $z > 2$.
+be at \DIFdelbegin \DIFdel{higher redshifts }\DIFdelend \DIFaddbegin \DIFadd{redshifts $z > 2$}\DIFaddend .
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Constraints on progenitor separation}
@@ -806,11 +910,12 @@ details]{Papovich2001}. We find a negligible contribution to the stellar mass
 the best-fit template).
 
 The delay time between formation and explosion is well accommodated by the
-models of \citet{Belczynski2006}, where a range of binary NS systems and their
-decays are followed in different host potentials.  Some of the longest delay
-times are, however excluded. Given late type nature of the host, only a small
+models of \citet{Belczynski2006}, \DIFdelbegin \DIFdel{although }\DIFdelend \DIFaddbegin \DIFadd{where a range of binary NS systems and their
+decays are followed in different host potentials.  Some of }\DIFaddend the longest delay
+times are\DIFdelbegin \DIFdel{excluded.
+This is especially true given the }\DIFdelend \DIFaddbegin \DIFadd{, however excluded. Given }\DIFaddend late type nature of the host\DIFaddbegin \DIFadd{, only a small
 subset of the longest population synthesis models violates the delay time
-constraint derived here \citep{OShaughnessy2008}. The same holds, if NS binaries
+constraint derived here }\DIFaddend \citep{OShaughnessy2008}. The same holds, if NS binaries
 are primarily formed through dynamical interactions in globular clusters
 \citep{Lee2010, Church2011}.
 

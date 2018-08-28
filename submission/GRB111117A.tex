@@ -13,8 +13,8 @@
 % according to the author-year natbib style
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{aa}    %% Astronomy & Astrophysics style class aa.cls v8.2
-%\documentclass[referee]{aa} 
+%\documentclass{aa}    %% Astronomy & Astrophysics style class aa.cls v8.2
+\documentclass[referee]{aa} 
 
 \usepackage{graphicx,url,twoopt,natbib}
 \usepackage[varg]{txfonts}           %% A&A font choice
@@ -24,19 +24,64 @@
 
 \usepackage{url}
 \usepackage{color,hyperref}
-\definecolor{linkcolor}{rgb}{0,0.3,0.7}
-\hypersetup{colorlinks=true,
-	linkcolor=linkcolor, 
-	citecolor=linkcolor,
-	filecolor=linkcolor, 
-	urlcolor=linkcolor}
+%\definecolor{linkcolor}{rgb}{0,0.3,0.7}
+%\hypersetup{colorlinks=true,
+%	linkcolor=linkcolor, 
+%	citecolor=linkcolor,
+%	filecolor=linkcolor, 
+%	urlcolor=linkcolor}
 
 \usepackage{natbib}
 
 \bibpunct{(}{)}{,}{a}{}{,}    %% natbib cite format used by A&A and ApJ
 
 % Manually specified definitions
-\input{definitions.tex}
+\newcommand{\farc}{\hbox{$.\!\!^{\prime\prime}$}} 
+\newcommand{\ergA}{$\rm{erg\,cm^{-2}\,s^{-1}\,\AA^{-1}}$} 
+\newcommand{\erg}{$\rm{erg\,cm^{-2}\,s^{-1}}$} 
+\newcommand{\kms}{$\rm{km\,s^{-1}}\,$}
+
+\newcommand{\griz}{$g' r' i' z'$}
+\newcommand{\JHK}{$JHK_{\rm{s}}$}
+\newcommand{\gK}{$g' r' i' z' JHK_{\rm{s}}$}
+\newcommand{\Msun}{$M_\odot$}
+
+
+% Elements
+\newcommand{\lya}{Ly$\alpha$} 
+\newcommand{\lyb}{Ly$\beta$} 
+\newcommand{\lyg}{Ly$\gamma$} 
+\newcommand{\hb}{H$\beta$} 
+\newcommand{\ha}{H$\alpha$} 
+\newcommand{\hg}{H$\gamma$} 
+\newcommand{\hi}{\ion{H}{i}} 
+\newcommand{\hei}{[\ion{He}{i}]} 
+\newcommand{\oi}{[\ion{O}{i}]} 
+\newcommand{\sii}{[\ion{S}{ii}]} 
+\newcommand{\siii}{[\ion{S}{iii}]} 
+\newcommand{\oii}{[\ion{O}{ii}]} 
+\newcommand{\oiii}{[\ion{O}{iii}]}
+\newcommand{\nii}{[\ion{N}{ii}]} 
+\newcommand{\nv}{[\ion{N}{v}]} 
+\newcommand{\neiii}{[\ion{Ne}{iii}]} 
+\newcommand{\NIii}{[\ion{Ni}{ii}]} 
+\newcommand{\feii}{\ion{Fe}{ii}} 
+\newcommand{\civ}{\ion{C}{iv}} 
+\newcommand{\cii}{\ion{C}{ii}}
+\newcommand{\mgi}{\ion{Mg}{i}} 
+\newcommand{\mgii}{\ion{Mg}{ii}} 
+\newcommand{\ali}{\ion{Al}{i}} 
+\newcommand{\alii}{\ion{Al}{ii}} 
+\newcommand{\aliii}{\ion{Al}{iii}} 
+\newcommand{\SIi}{\ion{Si}{i}} 
+\newcommand{\SIii}{\ion{Si}{ii}} 
+\newcommand{\SIiii}{\ion{Si}{iii}} 
+\newcommand{\SIiv}{\ion{Si}{iv}} 
+\newcommand{\znii}{\ion{Zn}{ii}} 
+\newcommand{\crii}{\ion{Cr}{ii}} 
+\newcommand{\mnii}{\ion{Mn}{ii}} 
+\newcommand{\tiii}{\ion{Ti}{ii}} 
+\newcommand{\caii}{\ion{Ca}{ii}} 
 
 \usepackage{xcolor}
 \newcommand\todo[1]{\textbf{(#1)}}
@@ -48,7 +93,76 @@
 \titlerunning{GRB~111117A}
 
 
-\input{authorlist.tex}
+\author{J.~Selsing\inst{1}
+	\and T.~Kr\"{u}hler\inst{2}
+	\and D.~Malesani\inst{1}
+	\and P.~D'Avanzo\inst{3}
+	\and S.~Schulze \inst{4, 5, 6}
+	\and S.~D.~Vergani\inst{3, 7}
+	\and J.~Palmerio\inst{8}
+	\and J.~Japelj\inst{9}
+	\and B.~Milvang-Jensen\inst{1}
+	\and D.~Watson\inst{1}
+	\and P.~Jakobsson\inst{10}
+	%
+	\and J.~Bolmer \inst{2}
+	\and Z.~Cano\inst{11}
+	\and S.~Covino \inst{3}
+	%\and L.~B.~Christensen\inst{1}
+	\and V.~D'Elia\inst{12, 13}
+	\and A.~de~Ugarte~Postigo\inst{11, 1}
+	\and J.~P.~U.~Fynbo\inst{1}
+	\and A.~Gomboc\inst{14}
+	\and K.~E.~Heintz\inst{10,1}
+	\and L.~Kaper \inst{9}
+	\and A.~J.~Levan \inst{15}
+	\and S.~Piranomonte \inst{12}
+	\and G.~Pugliese \inst{9}
+	\and R.~S\'{a}nchez-Ram\'{\i}rez \inst{11, 16}
+	\and M.~Sparre\inst{1,17}
+	\and N.~R.~Tanvir\inst{18}
+	\and C.~C.~Th\"{o}ne\inst{11}
+	\and K.~Wiersema \inst{18}
+}
+
+
+\institute{Dark Cosmology Centre, Niels Bohr Institute, University of Copenhagen, Juliane Maries Vej 30, 2100 K\o benhavn \O, Denmark
+	%2
+	\and Max-Planck-Institut f\"{u}r extraterrestrische Physik, Giessenbachstra\ss e, 85748 Garching, Germany
+	%3
+	\and INAF - Osservatorio Astronomico di Brera, via E. Bianchi 46, I-23807, Merate (LC), Italy
+	%4
+	\and Instituto de Astrof\'isica, Facultad de F\'isica, Pontificia Universidad Cat\'olica de Chile, Vicu\~{n}a Mackenna 4860, 7820436 Macul, Santiago, Chile
+	%5
+	\and Millennium Institute of Astrophysics, Vicu\~{n}a Mackenna 4860, 7820436 Macul, Santiago, Chile
+	%6
+	\and Department of Particle Physics and Astrophysics, Faculty of Physics, Weizmann Institute of Science, Rehovot 76100, Israel
+	%7
+	\and GEPI, Observatoire de Paris, PSL Research University, CNRS, Place Jules Janssen, 92190 Meudon, France
+	%8
+	\and Sorbonne Universités, UPMC Univ. Paris 6 et CNRS, UMR 7095, Institut d’Astrophysique de Paris, 98 bis bd Arago, 75014 Paris, France
+	%9
+	\and Anton Pannekoek Institute for Astronomy, University of Amsterdam, Science Park 904, 1098 XH Amsterdam, The Netherlands
+	%10
+	\and Centre for Astrophysics and Cosmology, Science Institute, University of Iceland, Dunhagi 5, 107 Reykjav\'ik, Iceland
+	%11
+	\and Instituto de Astrof\'isica de Andaluc\'ia (IAA-CSIC), Glorieta de la Astronom\'ia s/n, E-18008, Granada, Spain
+	%12
+	\and INAF-Osservatorio Astronomico di Roma, Via Frascati 33, I-00040 Monteporzio Catone, Italy
+	%13
+	\and ASI-Science Data Centre, Via del Politecnico snc, I-00133 Rome, Italy
+	%14
+	\and Centre for Astrophysics and Cosmology, University of Nova Gorica, Vipavska 13, 5000 Nova Gorica, Slovenia.
+	%15
+	\and Department of Physics, University of Warwick, Coventry CV4 7AL, UK
+	%16
+	\and Istituto de Astrofisica e Planetologia Spaziali, INAF, Via Fosso del Cavaliere 100, I-00133 Roma, Italy
+	%17
+	\and Heidelberger Institut f{\"u}r Theoretische Studien, Schloss-Wolfsbrunnenweg 35, 69118 Heidelberg, Germany 
+	%18
+	\and Department of Physics \& Astronomy and Leicester Institute of Space \& Earth Observation,
+	University of Leicester, University Road, Leicester, LE1 7RH, UK
+}
 
 \date{Received/ accepted}
 
@@ -186,7 +300,7 @@ are given in the AB system.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=9cm]{figures/GRB111117A_spec_obs.pdf}
+%	\includegraphics[width=9cm]{GRB111117A_spec_obs.pdf}
 	\caption{
 	FORS2 $R$-band imaging of the field of GRB~111117A with the X-shooter slit
 overlaid. The slit position represents 4 epochs of spectroscopic observations
@@ -199,7 +313,7 @@ from the \emph{Chandra} observations in \citet{Sakamoto2013}.
 
 %\begin{figure}
 %	\centering
-%	\includegraphics[width=9cm]{figures/OIII_img.pdf}
+%%	\includegraphics[width=9cm]{figures/OIII_img.pdf}
 %	\caption{2D-image of the \oiii$\lambda$5007 emission line. The location of a bright skyline is marked by the blue box. The location of the emission line is indicated with the red ellipse. Because the host is observed in nodding-mode, negative images of the emission line appear on both sides in the spatial direction.}
 %	\label{fig:line}
 %\end{figure}
@@ -207,7 +321,7 @@ from the \emph{Chandra} observations in \citet{Sakamoto2013}.
 
 \begin{figure*}
 	\centering
-	\includegraphics[width=18cm]{figures/grid.pdf}
+%	\includegraphics[width=18cm]{grid.pdf}
 	\caption{2D-images of the emission lines corresponding to \lya, \oii$\lambda$3727, \hb, \oiii$\lambda$4959, \oiii$\lambda$5007, and \ha. The location of bright skylines are marked by blue boxes. The locations of the emission lines are indicated with red ellipses. Because the host is observed in nodding-mode, negative images of the emission lines appear on both sides in the spatial direction. For the upper, left panel containing \lya, the systemic redshift position of \lya{} is marked by a yellow, vertical, dashed line. The red part of the \oii$\lambda$3727-doublet is affected by atmospheric absorption.}
 	\label{fig:line}
 \end{figure*}
@@ -215,7 +329,7 @@ from the \emph{Chandra} observations in \citet{Sakamoto2013}.
 
 \begin{figure*}
 	\centering
-	\includegraphics[width=16cm]{figures/SEDspecphot.pdf}
+%	\includegraphics[width=16cm]{SEDspecphot.pdf}
 	\caption{Best-fit SED to the derived photometry. The detection of \lya{}  is predicted from the SED fit and confirmed by the spectroscopic observations. Overplotted in grey is the observed spectrum, binned by 6 \AA{} for presentation purposes. Slit losses has been corrected for based on the average seeing of the observations, as confirmed by the comparison with the photometry. The blue, dashed line is the corresponding error spectrum, smoothed for presentation purposes. The reason for the spectral gaps at 5500 \AA{} and 10000 \AA{} is from the merging of the arms.}
 	\label{fig:SED}
 \end{figure*}
@@ -247,7 +361,26 @@ pixel, thus avoiding to base the weight on the pixel variance. Slit-loss
 correction has been applied on the combined spectrum based on the average seeing
 of the observations. We show the extracted spectrum in Fig.~\ref{fig:SED}.
 
-\input{tables/spec_overview.tex}
+\begin{table*}[!ht]
+	
+	\centering
+	\caption{Overview of the spectroscopic observations. ``JH'' in the slit width refers to observations where a $K$-band blocking filter has been used. The seeing is determined from the width of the spectral trace of a telluric standard star, observed close in time to the host observation. The spectral resolution, $R$, is measured from unresolved telluric absorption lines in the spectrum of the telluric standard star. \label{tab:spec_overview}}
+	\begin{tabular}{cccccccc}
+		\hline\hline
+		{Observation epoch} &  \multicolumn{3}{c}{Exposure time (s)} & Slit width & Airmass & Seeing & $R$   \\ [1.5pt]
+		\hline
+		(UT) & UVB  & VIS & NIR &  (arcsec)   & {} & (arcsec)  & {VIS/NIR}  \\ [1.5pt]
+		\hline
+		2011-11-19 01:33 & 2 $\times$ 2400 & 2 $\times$ 2400 & 8 $\times$ 600 & 1.0/1.0/0.9 & 1.49 & 0.75 & 11600/6700 \\
+		2013-07-15 09:02 & 2 $\times$ 1200 & 2 $\times$ 1200 & 8 $\times$ 300 & 1.0/1.0/0.9JH & 1.53 & 0.98 & 9600/8900 \\
+		2013-08-03 07:37 & 2 $\times$ 1200 & 2 $\times$ 1200 & 8 $\times$ 300 & 1.0/1.0/0.9JH & 1.55 & 0.85 & 11400/11300 \\
+		2013-08-03 08:34 & 2 $\times$ 1200 & 2 $\times$ 1200 & 8 $\times$ 300 & 1.0/1.0/0.9JH & 1.49 & 0.85 & 11400/11300 \\
+		
+		\hline\noalign{\smallskip}
+		
+	\end{tabular}
+	
+\end{table*}
 
 We determine a redshift of $z = 2.211 \pm 0.001$ from the simultaneous detection
 of emission lines belonging to \lya, \oii$\lambda$3727, \hb, \oiii$\lambda$4959,
@@ -357,7 +490,7 @@ derived for the Gemini image lends credence to the inferred magnitudes presented
 here, see Fig. \ref{fig:photplot}.
 
 \begin{figure}
-	\centering \includegraphics[width=9cm]{figures/photometry_mosaic.pdf}
+%%	\centering \includegraphics[width=9cm]{photometry_mosaic.pdf}
 \caption{Mosaic showing all used imaging. The host of GRB~111117A is marked by
 	a red circle with a 2\farc0 radius. This is the same size as the aperture used
 	for deriving the photometry. Each panel is 20\arcsec~in size, north is up, east
@@ -368,7 +501,35 @@ here, see Fig. \ref{fig:photplot}.
 \label{fig:photplot}
 \end{figure}
 
-\input{tables/phot_overview.tex}
+\begin{table*}[!ht]
+	
+	\centering
+	\caption{Overview of the photometric observations. \label{tab:phot_overview}}
+	\begin{tabular}{ccccccc}
+		\hline\hline
+		{Observation epoch} &  Exptime & Telescope/instrument & Filter & Airmass & Image quality & Host brightness\tablefootmark{a}  \\ [1.5pt]
+		\hline
+		({UT}) & ({ks}) &    & {} & & (arcsec)  & (AB mag)  \\ [1.5pt]
+		\hline
+		2013-08-30 07:43 & 1.45 & VLT/FORS2 & $g$ & 1.55 & 0.99 & $24.08\pm 0.09$ \\
+		2011-11-17 20:07 & 0.80 & GTC/OSIRIS & $g$ & 1.15 & 1.67 & $24.13\pm 0.09$ \\
+		2011-11-17 20:07 & 1.20 & GTC/OSIRIS & $r$ & 1.11 & 1.50 & $23.93\pm 0.08$ \\        
+		2013-07-17 08:37 & 1.45 & VLT/FORS2 & $R$ & 1.56 & 0.74 & $23.95\pm 0.06$ \\   
+		2011-11-28 21:10 & 3.60 & TNG/DOLORES & $R$ & 1.01 & 1.08 & $23.96\pm 0.13$ \\           
+		2011-11-17 20:07 & 0.36 & GTC/OSIRIS & $i$ & 1.08 & 1.50 & $23.89\pm 0.23$ \\   
+		2013-08-03 09:23 & 1.35 & VLT/FORS2 & $I$ & 1.54 & 0.93 & $24.22\pm 0.15$ \\           
+		2011-11-28 06:14 & 1.80 & Gemini/GMOS-N & $z$ & 1.01 & 0.84 & $24.24\pm 0.47$ \\  
+		2013-07-13 09:33 & 1.08 & VLT/FORS2 & $z$ & 1.49 & 0.63 & $23.76\pm 0.21$ \\             
+		2013-06-24 09:14 & 1.98 & VLT/HAWK-I & $J$ & 1.70 & 0.63 & $23.13\pm 0.18$ \\        
+		2013-06-27 09:21 & 1.68 & VLT/HAWK-I & $H$ & 1.63 & 0.91 & $22.94\pm 0.29$ \\   
+		2013-06-28 09:14 & 1.92 & VLT/HAWK-I & $K_\mathrm{s}$ & 1.65 & 0.76 & $23.07\pm 0.32$ \\   
+		\hline\noalign{\smallskip}
+		
+	\end{tabular}
+	
+	\tablefoot{
+		\tablefoottext{a}{All magnitudes are given in the AB system and are not corrected for the expected Galactic foreground extinction corresponding to a reddening of $E_{B-V}=0.027$\,mag.}}
+\end{table*}
 
 The multi-color SED is fit using the \citet{Bruzual2003} single stellar
 population models (SSPs) based on a \citet{Chabrier2003} with initial mass
@@ -514,7 +675,7 @@ $r$-process element enrichment of the universe \citep{Goriely2011, Ji2016,
 
 \begin{figure}
 	\centering
-	\includegraphics[width=9cm]{figures/XLC_111117A_rest.pdf}
+%%	\includegraphics[width=9cm]{XLC_111117A_rest.pdf}
 	\caption{Rest-frame XRT lightcurve of GRB~111117A, compared to the general population of XRT lightcurves of GRBs. The grey shaded region is a compilation of long GRB lightcurves \citep{Evans2007, Evans2009} where the color represents density. The light blue lines are sGRB lightcurves from bursts with duration of $T_{90} \lesssim 2$ s and those that were classified as short in \citet{Kann2011, Berger2014, DAvanzo2014a}. The thick green line is GRB~111117A. Despite the remarkably high redshift, the luminosity is comparable to the bulk of the short burst population and subluminous compared to the lGRB population. The insert shows the X-ray luminosity distributions of sGRBs and lGRBs at 10 ks, indicated by the vertical dashed line in the main panel.}
 	\label{fig:sxray_lightcurve}
 \end{figure}
@@ -589,17 +750,17 @@ X-ray flux is independent of the surrounding medium density \citep{Freedman2001,
 	Berger2003, Nysewander2009}.
 
 \begin{figure}
-	\centering \includegraphics[width=9cm]{figures/NH_z.pdf} \caption{Rest frame,
-	X-ray derived equivalent hydrogen column density of GRB~111117A compared to
-	complete samples of both long and short populations of GRBs. The sample of
-	lGRBs from \citet{Arcodia2016} is shown in red, where detections are also shown
-	with a kernel density estimate of the points and the limits on $N_\mathrm{H,X}$
-	are shown with arrows. The complete sample of sGRB by \citet{DAvanzo2014a} is
-	shown in blue, where again the limits are indicated by arrows. Marginalizations
-	over both axes are shown on the right and on the top of the plot, where the
-	limits are shown as semi-transparent bars and detections as solid ones. The red
-	curves in the marginalization plots are again the kernel density estimates of
-	the \citet{Arcodia2016} sample.} \label{fig:NH_z}
+%%	\centering \includegraphics[width=9cm]{NH_z.pdf} 
+\caption{Rest frame, X-ray derived equivalent hydrogen column density of
+	GRB~111117A compared to complete samples of both long and short populations of
+	GRBs. The sample of lGRBs from \citet{Arcodia2016} is shown in red, where
+	detections are also shown with a kernel density estimate of the points and the
+	limits on $N_\mathrm{H,X}$ are shown with arrows. The complete sample of sGRB by
+	\citet{DAvanzo2014a} is shown in blue, where again the limits are indicated by
+	arrows. Marginalizations over both axes are shown on the right and on the top of
+	the plot, where the limits are shown as semi-transparent bars and detections as
+	solid ones. The red curves in the marginalization plots are again the kernel
+	density estimates of the \citet{Arcodia2016} sample.} \label{fig:NH_z}
 \end{figure}
 
 
@@ -785,7 +946,7 @@ predictive intervals.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=9cm]{figures/prog_sep.pdf}
+%%	\includegraphics[width=9cm]{prog_sep.pdf}
 	\caption{Constraints on the initial progenitor separation, given binary constituent masses. As can be seen, a heavier system will inspiral faster, leading to a weaker constraint on the initial separation of the binary. The most probable value, the 68 per cent, and 98 percent posterior predictive intervals of the NS binary mass distribution from \citet{Kiziltan2013} are shown with the dashed ellipses, which corresponds to a constraint on maximal initial separation of $a_0 <3.1^{+0.2(+0.4)}_{-0.2(-0.4)}~R_\odot$, respectively.}
 	\label{fig:prog_sep}
 \end{figure}
